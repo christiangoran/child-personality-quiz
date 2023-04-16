@@ -29,9 +29,9 @@
   </div>
 
 
-  <div id="start-area">
+  <div class="start-area">
     
-    <form id="start-form" method="POST" onsubmit="startGame(event)">
+    <form id="start-form" method="Get" onsubmit="startGame(event)">
       <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1" maxlength="10">
       <input id="start-button" type="submit" value="Start" >
     </form>
@@ -39,7 +39,7 @@
   </div>
 
   <!-- First hidden section to come up -->
-  <div id="answer-area" class="hidden">
+  <div class="answer-area hide">
     <button class="answer-button">Answer 1</button>
     <button class="answer-button">Answer 2</button>
     <button class="answer-button">Answer 3</button>
@@ -49,11 +49,11 @@
   </div>
 
     <!-- Second hidden section to come up -->
-    <div id="pie-area" class="hidden">
+    <div id="pie-area" class="hide">
 
     </div>
 
-    <div id="result-area" class="hidden">
+    <div id="result-area" class="hide">
 
       <h2 id="personality">Test</h2>
       <p id="personality-paragraph">Test text</p>
