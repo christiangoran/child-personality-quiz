@@ -1,6 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 100vh;
-  width: 100%;
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(188,111,241,1) 100%);
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  color: #EB4826;
+  font-family: 'Dela Gothic One', sans-serif;
+ 
+}
+
+h1 {
+  font-size: 5vw;
+  line-height: 90%;
+}
+
+p {
+  font-family: Darker Grotesque, sans-serif;
+  font-size: 3vw;
+  line-height: 70%;
+}
+
+
+#start-area {
+  text-align: center;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  right: 20%;
+  top: 40%;
+  width: 300px;
+  display: none;
+}
+
+
+#answer-area {
+  text-align: center;
+  position: absolute;
+  right: 20%;
+  top: 35%;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+ 
+  
+}
+
+.answer-button {
+  border: 2px solid #EB4826;
+	margin: 2em;
+	padding: 0.5em;
+	display: inline-block;
+	background-color: transparent;
+	padding: 10px 20px;
+	color: #EB4826;
+  border-radius: 10px;
+}
+
+#start-button {
+  border: 2px solid #EB4826;
+	margin: 0.5em;
+  margin-top: 0.5em;
+	padding: 0.5em;
+	display: inline-block;
+	background-color: transparent;
+	padding: 10px 20px;
+	color: #EB4826;
+  border-radius: 10px;
+}
+
+#name-input {
+  border: 2px solid #EB4826;
+	margin: 0.5em;
+	padding: 0.5em;
+	background-color: transparent;
+	padding: 10px 20px;
+	color: #EB4826;
+  border-radius: 10px;
+}
+
+
+#result-area {
+  background-color: #EB4826;
+  color: black;
+  border-radius: 20px;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  position: absolute;
+  right: 20%;
+  top: 30%;
 }

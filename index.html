@@ -15,30 +15,31 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Crypto Quiz</title>
+  <title>Type of Child Quiz</title>
 </head>
 <body>
 
+ 
   <div id="header-div">
-    <h1>What Type of<br> Kid Where <br>You</h1>
+    <h1>What Type<br> of Kid<br> Were You?</h1>
   </div>
 
   <div id="question-area">
-    <p id="question-paragraph">Hey!<br>Please write your<br>name and start<br>the quiz!</p>
+    <p id="question-paragraph">Hey!<br>Please write your<br>name and start<br>the quiz :)</p>
   </div>
+
 
   <div id="start-area">
     
-     <form id="start-form" method="POST" onsubmit="startGame(event)">
+    <form id="start-form" method="POST" onsubmit="startGame(event)">
       <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1" maxlength="10">
-      <input id="start-btn" type="submit" value="Start" >
-     </form>
+      <input id="start-button" type="submit" value="Start" >
+    </form>
 
   </div>
 
   <!-- First hidden section to come up -->
   <div id="answer-area" class="hidden">
-    <div id="question-div">Question Here?</div>
     <button class="answer-button">Answer 1</button>
     <button class="answer-button">Answer 2</button>
     <button class="answer-button">Answer 3</button>
@@ -47,13 +48,29 @@
     <button class="answer-button">Answer 6</button>
   </div>
 
-  <!-- Second hidden section to come up -->
-  <div id="pie-area" class="hidden"></div>
-  <div id="result-area" class="hidden"></div>
+    <!-- Second hidden section to come up -->
+    <div id="pie-area" class="hidden">
+
+    </div>
+
+    <div id="result-area" class="hidden">
+
+      <h2 id="personality">Test</h2>
+      <p id="personality-paragraph">Test text</p>
+    </div>
+   
+       <!--Div that will hold the pie chart-->
+       <div id="chart_div"></div>
+
+ 
+
 
   <!-- All JS scripts-->
 <script src="assets/js/quiz.js"></script>
 <script src="assets/js/personality_array.js"></script>
 <script src="assets/js/questions_array.js"></script>
+
+
 </body>
+
 </html>

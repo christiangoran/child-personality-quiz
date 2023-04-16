@@ -1,251 +1,350 @@
 const questions = [{
   questionNumber: 1,
-  questionsText: 'Which cryptocurrency first caught your attention?',
+  questionsText: 'What was your favorite toy as a child?',
   answers: [{
       answerNumber: 1,
-      answerText: 'Bitcoin',
-      points: 3
+      answerText: 'Barbie dolls',
+      points: 5
     }, 
     {
       answerNumber: 2,
-      answerText: 'Ethereum',
-      points: 2
+      answerText: 'Legos',
+      points: 4
     },
     {
       answerNumber: 3,
-      answerText: 'Other altcoins',
-      points: 1
+      answerText: 'Beanie Babies',
+      points: 3
     },
     {
       answerNumber: 4,
-      answerText: 'None, I am a crypto skeptic',
+      answerText: 'Tamagotchi',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Power Rangers action figures',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Polly Pocket',
       points: 0
     }
   ]
 },
 {
   questionNumber: 2,
-  questionsText: 'What is your preferred investment strategy?',
+  questionsText: 'Which of the following movies did you love as a child?',
   answers: [{
-        answerNumber: 1,
-        answerText: 'Hold long-term and HODL',
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: 'Trade frequently for short-term gains',
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: 'Invest in promising altcoins',
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'Avoid investing in cryptocurrency altogether',
-        points: 0
-      }
-    ]
-  },
-  {
-  questionNumber: 3,
-  questionsText: 'How much time do you spend following cryptocurrency news and updates?',
-  answers: [{
-        answerNumber: 1,
-        answerText: "Every day, it's my passion",
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: 'A few times a week, to stay informed',
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: 'Occasionally, when something big happens',
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'Never, I have no interest in it',
-        points: 0
-      }
-    ]
-  },
-  {
+  answerNumber: 1,
+  answerText: 'The Lion King',
+  points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Toy Story',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Home Alone',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Babe - A little pig goes a long way',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: "Harry Potter and the Philosopher's Stone",
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'The Mighty Ducks',
+      points: 0
+    }
+  ]
+},
+{
+    questionNumber: 3,
+    questionsText: 'Which of these TV shows did you watch the most as a child?',
+    answers: [{
+    answerNumber: 1,
+    answerText: 'Rugrats',
+    points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Pokemon',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Power Rangers',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Hey Arnold!',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'DuckTales',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Sailor Moon',
+      points: 0
+    }
+  ]
+},
+{
   questionNumber: 4,
-  questionsText: 'What is your opinion on the future of cryptocurrency?',
+  questionsText: 'Which of these video games did you enjoy playing the most as a child?',
   answers: [{
-        answerNumber: 1,
-        answerText: 'It will revolutionize the world of finance',
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: 'It has potential, but may face regulatory hurdles',
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: 'It will continue to grow, but may not replace traditional finance',
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: "It's a fad that will eventually fade away",
-        points: 0
-      }
-    ]
-  },
-  {
+  answerNumber: 1,
+  answerText: 'Super Mario Bros.',
+  points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Sonic the Hedgehog',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'The Legend of Zelda: Ocarina of Time',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Pokemon Red/Blue',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Crash Bandicoot',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Donkey Kong Country',
+      points: 0
+    }
+  ],
+},
+{
   questionNumber: 5,
-  questionsText: 'What do you think is the biggest challenge facing cryptocurrency adoption?',
+  questionsText: 'Which of these snacks did you love as a child?',
   answers: [{
-        answerNumber: 1,
-        answerText: 'Lack of understanding and education',
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: 'Volatility and market fluctuations',
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: 'Security and hacking concerns',
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'Lack of government regulation and support',
-        points: 0
-      }
-    ]
-  },
-  {
+  answerNumber: 1,
+  answerText: 'Snickers bar',
+  points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Haribo gummy bears',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Kinder Surprise chocolate eggs',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Fizzy cola bottles',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Hubba Bubba bubble gum',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Skittles',
+      points: 0
+    }
+  ],
+},
+{
   questionNumber: 6,
-  questionsText: 'Which of the following features of cryptocurrency do you value the most?',
+  questionsText: 'Which of these pop stars did you idolize as a child?',
   answers: [{
-        answerNumber: 1,
-        answerText: 'Decentralization and freedom from government control',
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: 'Smart contract capabilities and decentralized applications',
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: 'Low transaction fees and fast transaction speeds',
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'None of the above, I do not value any specific feature',
-        points: 0
-      }
-    ]
-  },
-  {
+      answerNumber: 1,
+      answerText: 'Britney Spears',
+      points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'NSYNC',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Oasis',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Backstreet Boys',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Ace of Base',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Spice Girls',
+      points: 0
+    }
+  ],
+},
+{
   questionNumber: 7,
-  questionsText: 'How do you feel about the energy consumption associated with mining cryptocurrency?',
+  questionsText: 'Which of these trends did you participate in as a child?',
   answers: [{
-        answerNumber: 1,
-        answerText: "It's a necessary part of the process",
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: "It's a concern, but can be addressed through sustainable mining practices",
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: "It's a serious problem that needs to be addressed",
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'I am not aware of the energy consumption associated with mining cryptocurrency',
-        points: 0 
-      }  
-    ]
-  },
-  {
-    questionNumber: 8,
-    questionsText: 'What is your opinion on stablecoins?',
-    answers: [{
-        answerNumber: 1,
-        answerText: "They are a valuable tool for reducing volatility in the cryptocurrency market",
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: "They have potential, but may face regulatory challenges",
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: "They are unnecessary and go against the decentralized nature of cryptocurrency",
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'I am not familiar with stablecoins',
-        points: 0 
-      }
-    ]
-  },
-  {
-    questionNumber: 9,
-    questionsText: 'What do you think is the biggest benefit of cryptocurrency?',
-    answers: [{
-        answerNumber: 1,
-        answerText: "Financial freedom and independence from traditional banking systems",
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: "Increased transparency and accountability in financial transactions",
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: "Fast and low-cost international transfers",
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'None of the above, I do not see any benefits of cryptocurrency',
-        points: 0 
-      }
-    ]
-  },
-  {
-    questionNumber: 10,
-    questionsText: 'How do you see cryptocurrency evolving in the future?',
-    answers: [{
-        answerNumber: 1,
-        answerText: "It will become the primary form of currency and replace traditional finance",
-        points: 3
-      },
-      {
-        answerNumber: 2,
-        answerText: "It will continue to grow and evolve, but may not replace tradictional finance entirely",
-        points: 2
-      },
-      {
-        answerNumber: 3,
-        answerText: "It will become a niche investment opportunity",
-        points: 1
-      },
-      {
-        answerNumber: 4,
-        answerText: 'It will eventually fade away and be replaced by new technologies',
-        points: 0 
-      }]
-  }
-
-]
+      answerNumber: 1,
+      answerText: 'Beanie Babies collecting',
+      points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Game Boy hard core gaming',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Garbage Pail Kids',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Turtles action figures',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Platform shoes',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Mood ring wearing',
+      points: 0
+    }
+  ],
+},
+{
+  questionNumber: 8,
+  questionsText: 'Which of these board games did you enjoy playing the most as a child??',
+  answers: [{
+      answerNumber: 1,
+      answerText: 'Monopoly',
+      points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Candy Land',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Clue',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Life',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Sorry!',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Operation',
+      points: 0
+    }
+  ],
+},
+{
+  questionNumber: 9,
+  questionsText: 'Which of these outdoor activities did you enjoy most as a child?',
+  answers: [{
+      answerNumber: 1,
+      answerText: 'Jump rope',
+      points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Skateboard',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'Hopscotch',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Playing marbles',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Four square',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Soccer',
+      points: 0
+    }
+  ],
+},
+{
+  questionNumber: 10,
+  questionsText: 'Which of these school subjects did you excel in the most as a child?',
+  answers: [{
+      answerNumber: 1,
+      answerText: 'Math',
+      points: 5
+    },
+    {
+      answerNumber: 2,
+      answerText: 'Science',
+      points: 4
+    },
+    {
+      answerNumber: 3,
+      answerText: 'English',
+      points: 3
+    },
+    {
+      answerNumber: 4,
+      answerText: 'Art',
+      points: 2
+    },
+    {
+      answerNumber: 5,
+      answerText: 'Social studies',
+      points: 1
+    },
+    {
+      answerNumber: 6,
+      answerText: 'Physical Education',
+      points: 0
+    } 
+  ] 
+}]
