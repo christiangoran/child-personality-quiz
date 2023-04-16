@@ -1,27 +1,37 @@
 
-const startButton = document.getElementById('start-button');
-const startArea = document.getElementById('start-area');
+function startGame(event) {
+  event.preventDefault();
 
+// Consts for Start area //
+const startButton = document.getElementById('start-button');
+const startArea = document.querySelector('.start-area');
+
+// Consts for questions //
 const questionArea = document.getElementById('question-area');
 const questionParagraph = document.getElementById('question-paragraph');
 
-const answerArea = document.getElementById('answer-area');
+// Consts for answers //
+const answerArea = document.querySelector('.answer-area');
 const answers = document.getElementsByClassName('answer-button');
 
 const pieArea = document.getElementById('pie-area');
 
-const resultArea = document.getElementById('result-area');
-
-function startGame(event) {
-
-event.preventDefault();
+const resultArea = document.querySelector('#result-area');
 
 
-console.log('game started')
+// Name input and gamestart //
+const nameInput = document.getElementById('name-input');
 
-  startArea.classList.toggle('hide');
-  answerArea.classList.toggle('hide');
- 
+if (nameInput.value !== "") {
+  answerArea.classList.remove('hide');
+  startArea.classList.add('hide');
+  addQuestions(q);
+
+} else {
+
+  alert('Please enter your name to start the quiz.')
+}
+
 }
 
 function addQuestions() {
