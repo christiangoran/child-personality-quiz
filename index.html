@@ -5,28 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Scripts -->
+  <!-- Font awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+  crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Dela+Gothic+One&display=swap" rel="stylesheet"> 
+
   <link rel="stylesheet" href="assets/css/style.css">
-  
-  <title>Document</title>
+
+  <title>Crypto Quiz</title>
 </head>
 <body>
 
-  <div id="background-div">
+  <div id="header-div">
+    <h1>What Type of<br> Kid Where <br>You</h1>
+  </div>
 
-    <div id="logo-div"></div>
+  <div id="question-area">
+    <p id="question-paragraph">Hey!<br>Please write your<br>name and start<br>the quiz!</p>
+  </div>
 
-    <div id="start-div"></div>
-
-    <div id="game-div"></div>
-
-    <div id="result-div"></div>
+  <div id="start-area">
+    
+     <form id="start-form" method="POST" onsubmit="startGame(event)">
+      <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1" maxlength="10">
+      <input id="start-btn" type="submit" value="Start" >
+     </form>
 
   </div>
 
-<footer></footer>
-  
-<script src="assets/js/quiz.js"></script>
+  <!-- First hidden section to come up -->
+  <div id="answer-area" class="hidden">
+    <div id="question-div">Question Here?</div>
+    <button class="answer-button">Answer 1</button>
+    <button class="answer-button">Answer 2</button>
+    <button class="answer-button">Answer 3</button>
+    <button class="answer-button">Answer 4</button>
+    <button class="answer-button">Answer 5</button>
+    <button class="answer-button">Answer 6</button>
+  </div>
 
+  <!-- Second hidden section to come up -->
+  <div id="pie-area" class="hidden"></div>
+  <div id="result-area" class="hidden"></div>
+
+  <!-- All JS scripts-->
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/personality_array.js"></script>
+<script src="assets/js/questions_array.js"></script>
 </body>
 </html>
