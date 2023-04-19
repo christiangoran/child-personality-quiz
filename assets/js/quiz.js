@@ -68,31 +68,35 @@ function handleAnswer(target) {
     choice.classList.remove("selected");
     // Disables buttons after selecting until next round of questions 
     choice.disabled = true;
-    if (choice == target) {
-      choice.classList.add("selected");
-      // logs the personality connected to that answer to userScore
-      logScore();
-      // Give a short delay between selecting an answer and getting the next question
-      setTimeout(function () {
-          // remove current question from array and replace with next question or calculate results if game ended
-          if (questions.length <= 1) {
-              console.log('finished!')
-            } else {     
-              questions.splice(0, 1);
-              addQuestions(0)
-              choice.classList.remove("selected");
-              resetButton();
-            }
-        }, 300);
+    if (choice !== target) {
+      // disable other buttons during timeout (prevent logging duplicate results)
+      choice.disabled = true;    
       } else {
-        // disable other buttons during timeout (prevent logging duplicate results)
-        choice.disabled = true;
+        choice.classList.add("selected");
+        // logs the personality connected to that answer to userScore
+        //logScore();
+        logScore(choice);
+        // Give a short delay between selecting an answer and getting the next question
+        setTimeout(function () {
+            // remove current question from array and replace with next question or calculate results if game ended
+            if (questions.length <= 1) {
+                console.log('finished!')
+              } else {     
+                questions.splice(0, 1);
+                addQuestions(0)
+                choice.classList.remove("selected");
+                resetButton();
+              }
+            }, 300);
       }
   });
 }
 
-function logScore() {
-// let score = userChoices.push(questions.arrayAnswers.points)
+function logScore(choice) {
+  const currentQuestion = questions[0]; // get the current question which is always 0 due to splice at row 85
+  const selectedAnswer = currentQuestion.arrayAnswers.find(answer => answer.answerText === choice.innerText); // find the selected answer object
+  const points = selectedAnswer.points; // get the points value from the selected answer object
+  userChoices.push(points); // add the points value to the userChoices array
 }
 
 function resetButton() {
