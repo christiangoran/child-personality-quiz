@@ -1,7 +1,7 @@
 const questions = [{
   questionNumber: 1,
   questionsText: 'What was your favorite toy as a child?',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Barbie dolls',
       points: 5
@@ -36,10 +36,10 @@ const questions = [{
 {
   questionNumber: 2,
   questionsText: 'Which of the following movies did you love as a child?',
-  answers: [{
-  answerNumber: 1,
-  answerText: 'The Lion King',
-  points: 5
+  arrayAnswers: [{
+    answerNumber: 1,
+    answerText: 'The Lion King',
+    points: 5
     },
     {
       answerNumber: 2,
@@ -71,10 +71,10 @@ const questions = [{
 {
     questionNumber: 3,
     questionsText: 'Which of these TV shows did you watch the most as a child?',
-    answers: [{
-    answerNumber: 1,
-    answerText: 'Rugrats',
-    points: 5
+    arrayAnswers: [{
+      answerNumber: 1,
+      answerText: 'Rugrats',
+      points: 5
     },
     {
       answerNumber: 2,
@@ -106,10 +106,10 @@ const questions = [{
 {
   questionNumber: 4,
   questionsText: 'Which of these video games did you enjoy playing the most as a child?',
-  answers: [{
-  answerNumber: 1,
-  answerText: 'Super Mario Bros.',
-  points: 5
+  arrayAnswers: [{
+      answerNumber: 1,
+      answerText: 'Super Mario Bros.',
+      points: 5
     },
     {
       answerNumber: 2,
@@ -141,10 +141,10 @@ const questions = [{
 {
   questionNumber: 5,
   questionsText: 'Which of these snacks did you love as a child?',
-  answers: [{
-  answerNumber: 1,
-  answerText: 'Snickers bar',
-  points: 5
+  arrayAnswers: [{
+      answerNumber: 1,
+      answerText: 'Snickers bar',
+      points: 5
     },
     {
       answerNumber: 2,
@@ -176,7 +176,7 @@ const questions = [{
 {
   questionNumber: 6,
   questionsText: 'Which of these pop stars did you idolize as a child?',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Britney Spears',
       points: 5
@@ -211,7 +211,7 @@ const questions = [{
 {
   questionNumber: 7,
   questionsText: 'Which of these trends did you participate in as a child?',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Beanie Babies collecting',
       points: 5
@@ -246,7 +246,7 @@ const questions = [{
 {
   questionNumber: 8,
   questionsText: 'Which of these board games did you enjoy playing the most as a child??',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Monopoly',
       points: 5
@@ -281,7 +281,7 @@ const questions = [{
 {
   questionNumber: 9,
   questionsText: 'Which of these outdoor activities did you enjoy most as a child?',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Jump rope',
       points: 5
@@ -316,7 +316,7 @@ const questions = [{
 {
   questionNumber: 10,
   questionsText: 'Which of these school subjects did you excel in the most as a child?',
-  answers: [{
+  arrayAnswers: [{
       answerNumber: 1,
       answerText: 'Math',
       points: 5
