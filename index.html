@@ -17,6 +17,57 @@
 
   <script defer src="assets/js/quiz.js"></script>
 
+  <!-- Google Charts Script-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Popular', 11],
+        ['Creative', 2],
+        ['Collector',2],
+        ['Tech', 2],
+        ['Adventure',5],
+        ['Fashion', 2],
+      ]);
+
+      var options = {
+        title: '',  
+        
+        width: '100%',
+        height: '100%',
+        legend: {
+          alignment: 'center',
+          position: 'left',
+          textStyle: { color: '#EB4826', fontSize: 11 }
+        },
+        backgroundColor: 'transparent',
+        pieSliceBorderColor: 'transparent',
+        pieSliceBorderWidth: 0,
+        colors: 'red',
+        enableInteractivity: false,
+        pieSliceText: 'none',
+        colors: ['#EB4826', '#AC4C33', '#85422E', '#623729', '#442B22', '#271B16'],
+        animation: {
+          duration: 800,
+          easing: 'out',
+          startup: true
+        }
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+ 
+        chart.draw(data, options);
+
+
+    }
+  </script>
+
   <title>Type of Child Quiz</title>
 </head>
 <body>
@@ -55,13 +106,16 @@
 
     <!-- Second hidden section to come up -->
     <div id="pie-area" class="hide">
-
+      <div id="piechart" class="chart"></div>
     </div>
 
     <div id="result-area" class="hide">
 
       <h2 id="personality">Test</h2>
-      <p id="personality-paragraph">Test text</p>
+      <p id="personality-paragraph">
+        You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. 
+        You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance.
+      </p>
     </div>
    
        <!--Div that will hold the pie chart-->

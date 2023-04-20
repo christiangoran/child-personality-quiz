@@ -16,13 +16,16 @@
 
   const resultArea = document.querySelector('#result-area');
 
+  const pieArea = document.querySelector('#pie-area');
+  const progressArea = document.querySelector('#progress');
+
   // let currentQuestionIndex = 0;  <<--- If i can't make it work, perhaps I should re-think my approach and use this instead of questions.splice(0, 1) that I use on row.95
   let userChoices = [];
   let nameInput;
 
   // Name input and gamestart //
   nameInput = document.getElementById('name-input');
-
+// Learned more about arrow functions: https://www.youtube.com/watch?v=h33Srr5J9nY
 function startGame(event) {
     event.preventDefault();
     answers.forEach(choice => {
@@ -81,6 +84,12 @@ function handleAnswer(target) {
             // remove current question from array and replace with next question or calculate results if game ended
             if (questions.length <= 1) {
                 console.log('finished!')
+                answerArea.classList.add('hide');
+                resultArea.classList.remove('hide');
+                questionArea.classList.add('hide');
+                pieArea.classList.remove('hide');
+                progressArea.classList.add('hide');
+                console.log(answerResult(userChoices));
               } else {     
                 questions.splice(0, 1);
                 addQuestions(0)
@@ -97,6 +106,30 @@ function logScore(choice) {
   const selectedAnswer = currentQuestion.arrayAnswers.find(answer => answer.answerText === choice.innerText); // find the selected answer object
   const points = selectedAnswer.points; // get the points value from the selected answer object
   userChoices.push(points); // add the points value to the userChoices array
+}
+
+// Used this page to understand how to count number of times something appears in an array: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array //
+function answerResult(userChoices) {
+  // I create an empty result object where each personality has 0% //
+  const result = {
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0
+  };
+
+  userChoices.forEach(choice => {
+    result[choice] += 1;
+  });
+  for (let key in result) {
+    // Evens up the result into an int that can be used as a percentage value // 
+    let percentage = Math.round((result[key] / userChoices.length) * 100);
+    result[key] = percentage;
+  }
+  return result;
+
 }
 
 function resetButton() {

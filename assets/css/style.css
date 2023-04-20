@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-size: 110%;
+  font-size: 1.5vw;
 }
 
 body {
@@ -19,9 +19,13 @@ h1 {
   line-height: 90%;
 }
 
+h2 {
+  font-size: 3vw
+}
+
 p {
   font-family: Darker Grotesque, sans-serif;
-  font-size: 3vw;
+  font-size: 2.5vw;
   line-height: 75%;
 }
 
@@ -32,37 +36,81 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  right: 20%;
+  right: 15%;
   top: 40%;
-  width: 300px;
+  width: 40vw;
 }
-
 
 .answer-area {
   text-align: center;
   position: absolute;
-  right: 20%;
+  right: 15%;
   top: 20%;
-  width: 500px;
+  width: 40vw;
   display: grid;
   grid-template-columns: repeat(2,auto);
+}
 
+#result-area {
+  background-color: #EB4826;
+  color: black;
+  border-radius: 20px;
+  width: 40vw;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  right: 15%;
+  top: 25%;
+}
+
+#result-area p {
+  font-size: 2vw;
+  padding: 5% 10% 10% 10%;
 }
 
 #question-area {
   width: 30vw;
 }
 
-.answer-button {
+#name-input {
+  width: 30vw;
   border: 2px solid #EB4826;
-  font-size: 110%;
-  width: 250px;
-  height: 100px;
-	margin: 2em;
+	margin: 0.5em;
 	padding: 0.5em;
-	display: inline-block;
 	background-color: transparent;
 	padding: 10px 20px;
+	color: #EB4826;
+  border-radius: 10px;
+}
+
+#start-button {
+  border: 2px solid #EB4826;
+  font-size: 2vw;
+  width: 20vw;
+  height: 8wv;
+	margin: 0.5em;
+  margin-top: 0.5em;
+	display: inline-block;
+	background-color: transparent;
+	padding: 5% 10%;
+	color: #EB4826;
+  border-radius: 10px;
+}
+
+#start-button:hover {
+  background-color: #EB4826;
+  color: black;
+}
+
+.answer-button {
+  border: 2px solid #EB4826;
+  font-size: 1.5vw;
+  width: 20vw;
+  height: 8vw;
+	margin: 1em;
+	display: inline-block;
+	background-color: transparent;
+	padding: 5% 10%;
 	color: #EB4826;
   border-radius: 10px;
   transition: 0.5s;
@@ -80,50 +128,11 @@ p {
   filter: blur(5px);
 }
 
-#start-button {
-  border: 2px solid #EB4826;
-  font-size: 110%;
-  width: 250px;
-  height: 100px;
-	margin: 0.5em;
-  margin-top: 0.5em;
-	padding: 0.5em;
-	display: inline-block;
-	background-color: transparent;
-	padding: 10px 20px;
-	color: #EB4826;
-  border-radius: 10px;
+#pie-area {
+  width: 40vw;
+  height: 40vh;
+  font-size: 14px;
 }
-
-#start-button:hover {
-  background-color: #EB4826;
-  color: black;
-}
-
-#name-input {
-  border: 2px solid #EB4826;
-	margin: 0.5em;
-	padding: 0.5em;
-	background-color: transparent;
-	padding: 10px 20px;
-	color: #EB4826;
-  border-radius: 10px;
-}
-
-
-#result-area {
-  background-color: #EB4826;
-  color: black;
-  border-radius: 20px;
-  width: 600px;
-  height: 400px;
-  text-align: center;
-  position: absolute;
-  right: 20%;
-  top: 30%;
-
-}
-
 .selected {
   box-shadow: 0 0 10px 40px #EB4826;
   background: #EB4826;
