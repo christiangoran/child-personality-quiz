@@ -83,13 +83,12 @@ function handleAnswer(target) {
         setTimeout(function () {
             // remove current question from array and replace with next question or calculate results if game ended
             if (questions.length <= 1) {
-                console.log('finished!')
                 answerArea.classList.add('hide');
                 resultArea.classList.remove('hide');
                 questionArea.classList.add('hide');
                 pieArea.classList.remove('hide');
                 progressArea.classList.add('hide');
-                console.log(answerResult(userChoices));
+                answerResult(userChoices);
               } else {     
                 questions.splice(0, 1);
                 addQuestions(0)
@@ -119,7 +118,7 @@ function answerResult(userChoices) {
     4: 0,
     5: 0
   };
-
+// Here I add a point (questions.arrayAnswers.point) to each personality in userChoices array //
   userChoices.forEach(choice => {
     result[choice] += 1;
   });
@@ -127,9 +126,8 @@ function answerResult(userChoices) {
     // Evens up the result into an int that can be used as a percentage value // 
     let percentage = Math.round((result[key] / userChoices.length) * 100);
     result[key] = percentage;
-  }
+  } 
   return result;
-
 }
 
 function resetButton() {
