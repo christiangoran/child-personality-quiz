@@ -79,6 +79,7 @@ function handleAnswer(target) {
         // logs the personality connected to that answer to userScore
         //logScore();
         logScore(choice);
+        console.log(userChoices);
         // Give a short delay between selecting an answer and getting the next question
         setTimeout(function () {
             // remove current question from array and replace with next question or calculate results if game ended
@@ -127,8 +128,33 @@ function answerResult(userChoices) {
     let percentage = Math.round((result[key] / userChoices.length) * 100);
     result[key] = percentage;
   } 
+  findWinner(result);
+  console.log("return result", result);
   return result;
+ 
 }
+
+// const result = answerResult(userChoices);
+// Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+function findWinner(result) {
+  let maxPercentage = 0;
+  let winningKey;
+  for (let key in result) {
+    if (result[key] > maxPercentage) {
+      maxPercentage = result[key];
+      winningKey = key;
+    }
+  }
+  console.log('Winner IS!!!', winningKey);
+  return winningKey;
+}
+
+
+// const values = Object.values(result)
+// const winner = Math.max.apply(...values);
+// console.log(winner);
+
+
 
 function resetButton() {
   answers.forEach(choice => {
