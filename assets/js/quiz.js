@@ -19,6 +19,9 @@
   const pieArea = document.querySelector('#pie-area');
   const progressArea = document.querySelector('#progress');
 
+  const personalityHeader = document.querySelector('#personality');
+  const personalityParagraph = document.querySelector('#personality-paragraph');
+
   // let currentQuestionIndex = 0;  <<--- If i can't make it work, perhaps I should re-think my approach and use this instead of questions.splice(0, 1) that I use on row.95
   let userChoices = [];
   let nameInput;
@@ -129,12 +132,11 @@ function answerResult(userChoices) {
     result[key] = percentage;
   } 
   findWinner(result);
+
   console.log("return result", result);
   return result;
- 
 }
 
-// const result = answerResult(userChoices);
 // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
 function findWinner(result) {
   let maxPercentage = 0;
@@ -145,16 +147,21 @@ function findWinner(result) {
       winningKey = key;
     }
   }
+  winningPersonality(winningKey);
   console.log('Winner IS!!!', winningKey);
   return winningKey;
+
 }
 
-
-// const values = Object.values(result)
-// const winner = Math.max.apply(...values);
-// console.log(winner);
-
-
+function winningPersonality(winningKey) {
+  for (let i = 0; i < personalities.length; i++) {
+    if (personalities[i].number.toString() === winningKey) {
+      console.log('The winning personality is:', personalities[i].name);
+      personalityHeader.innerHTML = `${nameInput.value}, you were clearly ${personalities[i].name}`;
+      personalityParagraph.innerHTML = personalities[i].text;
+    }
+  }
+}
 
 function resetButton() {
   answers.forEach(choice => {
@@ -522,32 +529,39 @@ const questions = [{
 //------------------------------------------------------------------------------------------//
 let personalities = [{
 
+  number: 0,
   type: 'popular',
   name: "The Popular Kid",
   text: "You were social and outgoing as a child, and likely had a large circle of friends. You enjoyed being the center of attention and were interested in fashion, pop culture, and the latest trends."
 
 },
 {
+  number: 1,
   type: 'creative',
   name: 'The Creative Type',
   text: "You were imaginative and artistic as a child, and enjoyed expressing yourself through various forms of creativity, such as drawing, writing, or music."
 },
 {
+  number: 2,
   type: 'collector',
   name: 'The collector',
   text: "You had a love for collecting things as a child, whether it was Beanie Babies, Pokemon cards, or other toys. You were likely organized and detail-oriented, and enjoyed the thrill of completing a set."
 },
 {
+  number: 3,
   type: 'tech',
   name: 'The tech-savvy kid',
   text: "You were fascinated by technology and video games as a child, and were likely an early adopter of new gadgets and devices. You enjoyed problem-solving and exploring new worlds through the screen."
 },
 {
+
+  number: 4,
   type: 'adventure',
   name: 'The Adventurous One',
   text: "You were active and outgoing as a child, and enjoyed trying new things and exploring the outdoors. You had a thirst for adventure and likely participated in sports or other physical activities."
 },
 {
+  number: 5,
   type: 'fashion',
   name: 'The Fashionista',
   text: "You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance."

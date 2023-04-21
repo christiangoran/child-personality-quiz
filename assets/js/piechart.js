@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
+function drawChart(result) {
 
   var data = google.visualization.arrayToDataTable([
     ['Task', 'Hours per Day'],
     ['Popular', 11],
-    ['Creative', 2],
-    ['Collector',2],
-    ['Tech', 2],
-    ['Adventure',5],
-    ['Fashion', 2],
+    ['Creative', 9],
+    ['Collector', 6],
+    ['Tech', 3],
+    ['Adventure',2],
+    ['Fashion', 1],
   ]);
 
   var options = {
