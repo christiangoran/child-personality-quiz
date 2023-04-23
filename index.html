@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font awesome & Google Fonts -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
-  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Dela+Gothic+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Dela+Gothic+One&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -34,20 +36,23 @@
   <!-- quiz.js populates #question-paragraph after game has started -->
   <div id="question-area">
     <p id="question-paragraph">Are you curious to find out what type of child you were? <br>
-      Were you a mischievous troublemaker or the innocent one? <br> Take our quiz and 
+      Were you a mischievous troublemaker or the innocent one? <br> Take our quiz and
       let's find out together! </p>
   </div>
 
   <!-- Name required to start game -->
   <div class="start-area">
     <form id="start-form" method="Get" onsubmit="startGame(event)">
-      <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1" maxlength="10">
-      <input id="start-button" type="submit" value="Start" >
+      <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1"
+        maxlength="10">
+      <input id="start-button" type="submit" value="Start">
     </form>
   </div>
 
   <!-- Answers div, display:none removed when name is entered and game started -->
-  <div><p Id="progress"></p></div>
+  <div>
+    <p Id="progress"></p>
+  </div>
   <div class="answer-area hide">
     <button class="answer-button">Answer 1</button>
     <button class="answer-button">Answer 2</button>
@@ -57,40 +62,40 @@
     <button class="answer-button">Answer 6</button>
   </div>
 
-    <!-- Pie chart div, display:none removed when all questions are answered -->
-    <div id="pie-area" class="hide">
-      <canvas id="myChart"></canvas>
-      <div id="categories">
-        <div class="categories-stats">
-          <p id="cat-color1" class="stats hide">Category 1</p>
-        </div>
-        <div class="categories-stats">
-          <p id="cat-color2" class="stats hide">Category 2</p>
-        </div>
-        <div class="categories-stats">
-          <p id="cat-color3" class="stats hide">Category 3</p>
-        </div>
-        <div class="categories-stats">
-          <p id="cat-color4" class="stats hide">Category 4</p>
-        </div>
-        <div class="categories-stats">
-          <p id="cat-color5" class="stats hide">Category 5</p>
-        </div>
-        <div class="categories-stats">
-          <p id="cat-color6" class="stats hide">Category 6</p>
-        </div>
+  <!-- Pie chart div, display:none removed when all questions are answered -->
+  <div id="pie-area" class="hide">
+    <canvas id="myChart"></canvas>
+    <div id="categories">
+      <div class="categories-stats">
+        <p id="cat-color1" class="stats hide">Category 1</p>
+      </div>
+      <div class="categories-stats">
+        <p id="cat-color2" class="stats hide">Category 2</p>
+      </div>
+      <div class="categories-stats">
+        <p id="cat-color3" class="stats hide">Category 3</p>
+      </div>
+      <div class="categories-stats">
+        <p id="cat-color4" class="stats hide">Category 4</p>
+      </div>
+      <div class="categories-stats">
+        <p id="cat-color5" class="stats hide">Category 5</p>
+      </div>
+      <div class="categories-stats">
+        <p id="cat-color6" class="stats hide">Category 6</p>
       </div>
     </div>
+  </div>
 
-      <!-- Result of personality div, display:none removed when all questions are answered -->
-    <div id="result-area" class="hide">
-      <h2 id="personality">Test</h2>
-      <p id="personality-paragraph">
-        You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. 
-        You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance.
-      </p>
-    </div>
- 
+  <!-- Result of personality div, display:none removed when all questions are answered -->
+  <div id="result-area" class="hide">
+    <h2 id="personality">Test</h2>
+    <p id="personality-paragraph">
+      You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories.
+      You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance.
+    </p>
+  </div>
+
 </body>
 
 </html>

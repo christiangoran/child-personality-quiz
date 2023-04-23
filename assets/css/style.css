@@ -4,14 +4,14 @@
 }
 
 body {
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   padding: 0;
   margin: 0;
   height: 100vh;
   width: 100vw;
   color: #EB4826;
   font-family: 'Dela Gothic One', sans-serif;
- 
+
 }
 
 h1 {
@@ -40,6 +40,16 @@ p {
   width: 40vw;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name-input {
+  min-width: 200px;
+}
+
 .answer-area {
   text-align: center;
   position: absolute;
@@ -47,10 +57,10 @@ p {
   top: 20%;
   width: 40vw;
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
 }
 
-input:focus { 
+input:focus {
   outline: none !important;
   border-color: red;
   box-shadow: 0 0 20px #85422E;
@@ -80,11 +90,11 @@ input:focus {
 #name-input {
   width: 30vw;
   border: 2px solid #EB4826;
-	margin: 0.5em;
-	padding: 0.5em;
-	background-color: transparent;
-	padding: 10px 20px;
-	color: #EB4826;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #EB4826;
   border-radius: 10px;
 }
 
@@ -93,12 +103,12 @@ input:focus {
   font-size: 2vw;
   width: 20vw;
   height: 8wv;
-	margin: 0.5em;
+  margin: 0.5em;
   margin-top: 0.5em;
-	display: inline-block;
-	background-color: transparent;
-	padding: 5% 10%;
-	color: #EB4826;
+  display: inline-block;
+  background-color: transparent;
+  padding: 5% 10%;
+  color: #EB4826;
   border-radius: 10px;
 }
 
@@ -112,11 +122,11 @@ input:focus {
   font-size: 1.5vw;
   width: 20vw;
   height: 8vw;
-	margin: 1em;
-	display: inline-block;
-	background-color: transparent;
-	padding: 5% 10%;
-	color: #EB4826;
+  margin: 1em;
+  display: inline-block;
+  background-color: transparent;
+  padding: 5% 10%;
+  color: #EB4826;
   border-radius: 10px;
   transition: 0.5s;
 }
@@ -150,7 +160,6 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
 }
 
 #categories p {
@@ -219,7 +228,11 @@ input:focus {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
+
+  * {
+    font-size: 4vw;
+  }
 
   h1 {
     font-size: 9vw;
@@ -233,7 +246,7 @@ input:focus {
     font-size: 6vw;
   }
 
-  #result.area {
+  #result-area {
     width: 80vw;
   }
 
@@ -253,5 +266,20 @@ input:focus {
     font-size: 3.5vw;
     width: 38vw;
     height: 10vh;
+  }
+
+  #start-button {
+    font-size: 3.5vw;
+    width: 38vw;
+    height: 5vh;
+  }
+
+  #categories {
+    width: 30vw
+  }
+
+  #categories p {
+    font-size: 5vw;
+    width: 35vw;
   }
 }
