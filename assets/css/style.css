@@ -218,3 +218,40 @@ input:focus {
   }
 
 }
+
+@media (max-width: 800px) {
+
+  h1 {
+    font-size: 9vw;
+  }
+
+  h2 {
+    font-size: 7vw;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+
+  #result.area {
+    width: 80vw;
+  }
+
+  #result-area p {
+    font-size: 6vw;
+  }
+
+  #question-area {
+    width: 70vw;
+  }
+
+  .answer-area {
+    width: auto;
+  }
+
+  .answer-button {
+    font-size: 3.5vw;
+    width: 38vw;
+    height: 10vh;
+  }
+}
