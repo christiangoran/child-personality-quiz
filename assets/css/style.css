@@ -29,7 +29,6 @@ p {
   line-height: 75%;
 }
 
-
 .start-area {
   text-align: center;
   position: absolute;
@@ -49,6 +48,12 @@ p {
   width: 40vw;
   display: grid;
   grid-template-columns: repeat(2,auto);
+}
+
+input:focus { 
+  outline: none !important;
+  border-color: red;
+  box-shadow: 0 0 20px #85422E;
 }
 
 #result-area {
@@ -187,4 +192,29 @@ p {
 
 .hide {
   display: none;
+}
+
+@media (max-width: 1120px) {
+
+  .start-area {
+    position: static;
+    text-align: center;
+    margin: auto;
+  }
+
+  .answer-area {
+    position: static;
+    margin: auto;
+  }
+
+  #result-area {
+    padding-top: 20px;
+    position: static;
+    margin: auto;
+  }
+
+  #pie-area {
+    width: 60vw;
+  }
+
 }

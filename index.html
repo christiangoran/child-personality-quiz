@@ -15,40 +15,38 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- JavaScript files -->
   <script defer src="assets/js/quiz.js"></script>
   <script defer src="assets/js/piechart.js"></script>
 
   <!--ChartsJS Script-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  </script>
-
   <title>Type of Child Quiz</title>
 </head>
+
 <body>
 
- 
   <div id="header-div">
     <h1>What Type<br> of Kid<br> Were You?</h1>
   </div>
 
+  <!-- quiz.js populates #question-paragraph after game has started -->
   <div id="question-area">
-    <p id="question-paragraph">Are you curious to find out what type of child you were? 
-      Were you a mischievous troublemaker or the innocent one? Take our quiz and 
+    <p id="question-paragraph">Are you curious to find out what type of child you were? <br>
+      Were you a mischievous troublemaker or the innocent one? <br> Take our quiz and 
       let's find out together! </p>
   </div>
 
-
+  <!-- Name required to start game -->
   <div class="start-area">
-    
     <form id="start-form" method="Get" onsubmit="startGame(event)">
       <input id="name-input" type="text" placeholder="Enter your name" aria-label="Enter your name" minlength="1" maxlength="10">
       <input id="start-button" type="submit" value="Start" >
     </form>
-
   </div>
 
-  <!-- First hidden sections to come up -->
+  <!-- Answers div, display:none removed when name is entered and game started -->
   <div><p Id="progress"></p></div>
   <div class="answer-area hide">
     <button class="answer-button">Answer 1</button>
@@ -59,7 +57,7 @@
     <button class="answer-button">Answer 6</button>
   </div>
 
-    <!-- Second hidden section to come up -->
+    <!-- Pie chart div, display:none removed when all questions are answered -->
     <div id="pie-area" class="hide">
       <canvas id="myChart"></canvas>
       <div id="categories">
@@ -84,18 +82,14 @@
       </div>
     </div>
 
+      <!-- Result of personality div, display:none removed when all questions are answered -->
     <div id="result-area" class="hide">
-
       <h2 id="personality">Test</h2>
       <p id="personality-paragraph">
         You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. 
         You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance.
       </p>
     </div>
-   
-       <!--Div that will hold the pie chart-->
-       <div id="chart_div"></div>
-
  
 </body>
 
