@@ -14,13 +14,19 @@
 
   const progress = document.querySelector('#progress');
 
+  // Results //
+
   const resultArea = document.querySelector('#result-area');
 
   const pieArea = document.querySelector('#pie-area');
   const progressArea = document.querySelector('#progress');
 
+  const catParagraph = document.querySelectorAll('.stats')
+
   const personalityHeader = document.querySelector('#personality');
   const personalityParagraph = document.querySelector('#personality-paragraph');
+
+  let result = [];
 
   // let currentQuestionIndex = 0;  <<--- If i can't make it work, perhaps I should re-think my approach and use this instead of questions.splice(0, 1) that I use on row.95
   let userChoices = [];
@@ -92,6 +98,10 @@ function handleAnswer(target) {
                 questionArea.classList.add('hide');
                 pieArea.classList.remove('hide');
                 progressArea.classList.add('hide');
+                catParagraph.forEach(paragraph => {
+                  paragraph.classList.remove('hide');
+                });
+
                 answerResult(userChoices);
               } else {     
                 questions.splice(0, 1);
@@ -113,8 +123,8 @@ function logScore(choice) {
 
 // Used this page to understand how to count number of times something appears in an array: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array //
 function answerResult(userChoices) {
-  // I create an empty result object where each personality has 0% //
-  const result = {
+  // I create an empty result object where each personality has 0% //w
+  result = {
     0: 0,
     1: 0,
     2: 0,
@@ -131,10 +141,12 @@ function answerResult(userChoices) {
     let percentage = Math.round((result[key] / userChoices.length) * 100);
     result[key] = percentage;
   } 
+  populatePie(result);
   findWinner(result);
-
+  populateStatParagraphs(result);
   console.log("return result", result);
   return result;
+
 }
 
 // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
@@ -147,21 +159,54 @@ function findWinner(result) {
       winningKey = key;
     }
   }
-  winningPersonality(winningKey);
-  console.log('Winner IS!!!', winningKey);
+  winningPersonality(winningKey);;
   return winningKey;
-
 }
 
 function winningPersonality(winningKey) {
   for (let i = 0; i < personalities.length; i++) {
     if (personalities[i].number.toString() === winningKey) {
       console.log('The winning personality is:', personalities[i].name);
-      personalityHeader.innerHTML = `${nameInput.value}, you were clearly ${personalities[i].name}`;
+      personalityHeader.innerHTML = `${nameInput.value}, <strong>you were clearly</strong><br>${personalities[i].name}`;
       personalityParagraph.innerHTML = personalities[i].text;
     }
   }
 }
+
+// https://www.samanthaming.com/tidbits/76-converting-object-to-array/  //
+function populatePie(results) {
+ let pieArray = [];
+ pieArray = Object.values(results);
+ pieArray.sort((a, b) => b - a);
+ buildPie(pieArray);
+ return pieArray;
+}
+
+function populateStatParagraphs(result) {
+  // Create a new object with renamed keys
+  const renamedResult = {
+    Popular: result[0],
+    Creative: result[1],
+    Collector: result[2],
+    Techie: result[3],
+    Adventurer: result[4],
+    Fashionista: result[5]
+  };
+  // Sort the object by value in descending order
+  const sortedResult = Object.entries(renamedResult)
+    .sort(([, a], [, b]) => b - a)
+    .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
+  // Populate the paragraphs with the class name "stats"
+  const paragraphs = document.querySelectorAll('.stats');
+  let i = 0;
+  for (let [key, value] of Object.entries(sortedResult)) {
+    if (i >= paragraphs.length) break;
+    paragraphs[i].textContent = `${key}: ${value}%`;
+    i++;
+  }
+}
+
 
 function resetButton() {
   answers.forEach(choice => {

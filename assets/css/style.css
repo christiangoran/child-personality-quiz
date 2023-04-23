@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3vw
+  font-size: 2vw
 }
 
 p {
@@ -129,10 +129,54 @@ p {
 }
 
 #pie-area {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  position: relative;
+  top: 0;
   width: 40vw;
   height: 40vh;
-  font-size: 14px;
+  border-color: #EB4826;
+  border-width: 3px;
+  border-radius: 10px;
 }
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+#categories p {
+  font-size: 2vw;
+  line-height: 0%;
+}
+
+#cat-color1 {
+  color: #EB4826;
+}
+
+#cat-color2 {
+  color: #AC4C33;
+}
+
+#cat-color3 {
+  color: #85422E;
+}
+
+#cat-color4 {
+  color: #623729;
+}
+
+#cat-color5 {
+  color: #442B22;
+}
+
+#cat-color6 {
+  color: #271B16;
+}
+
 .selected {
   box-shadow: 0 0 10px 40px #EB4826;
   background: #EB4826;
