@@ -5,7 +5,7 @@ Portfolio Project 2
 
 This is the documentation for my web application: What Type of Kid Were You Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
-![Website mockup](/workspace/child-personality-quiz/assets/wireframes/actual-site.png)
+![Website mockup](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/actual-site.png)
 
 ## UX
 Strategy Plane
@@ -81,16 +81,16 @@ Each time the user selects an answer it builds up the resulting picture of the u
 
 I began by using the program Balsamiq, which was recommended by the Code Institute, to create low-fidelity wireframes that would help me organize the information priorities and site structure and get a sense of the size of each page.
 
-![Quiz build wireframe](/workspace/child-personality-quiz/assets/wireframes/project2-wireframes.png)
+![Quiz build wireframe](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/project2-wireframes.png)
 
 
 After establishing the general structure of each page, I moved on to creating a full-color and image mockup in Figma to test the color selection I had decided on. I got inspired by the style Brutalism or Neo-Brutalism and chose my color scheme. High contrast and bold minimalistic design compositions with thick sans-serif fonts is typical for this type of design.
 I thought the Brutalism style worked well in giving a touch of retro minimalistic commodore terminal feel to the design without being to obvious.
 
 
-![Main page color mockup](/workspace/child-personality-quiz/assets/wireframes/project2-mockup.png)
+![Main page color mockup](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/project2-mockup.png)
 
-![Color and Font-Family Card](/workspace/child-personality-quiz/assets/wireframes/project2-color-card.png)
+![Color and Font-Family Card](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/project2-color-card.png)
 
 ### Structure 
 
@@ -148,20 +148,59 @@ Both the main index.html and 404 page contain a footer, containing my name and s
   ## Features
 
   ### All pages
+  
+  #### **Header**
+  
+  Across all sections of the website the header can be seen.
+  The header is responsive and its size adjusts with the screen size all the way down to phone size screens.
+  
+  ![Header & Intro](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/header.png)
 
   #### **Favicon** 
 
   #### **Footer**
+  
+The footer contains links to relevant social media sites
+The footer social icons have aria labels to make them accessible
+The footer social icons have a hover effect
+The footer is responsive, the icons adjusts down to tablet-size screens and is replaced by a smaller image on mobile to make the design work and the site perform well.
 
   *Footer on desktop / tablet*
-
-  *Footer on mobile*
+  
+  ![Footer desktop](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/footer-desktop.png)
 
   ### Start Section
+  
+The start section contains the header clearly giving the user an idea of what the page is about, together with a call to action type text telling the user to go ahead and try the quiz.
+
+![Start section](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/start-screen-desktop.png)
+
+![Start section phone](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/start-area-phone.PNG)
+
+- There is a text field where the user is required to enter a name to be able to start the game.
+
+![Text field - name required](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/name-required.png)
 
   ### Quiz Section
+  
+  After the user has entered their name and pressed the start button, the name field, start button and introduction text disappears and in its place a question and six answer buttons appear.
+  
+  Question appears along with a progress indicator clearly showing the user how many questions the game consists of.
+  ![Questions](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/progress.png)
+  
+  Besides the questions, there are also six answer buttons.
+  ![Game area](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/answers-desktop.png)
 
   ### Result Section
+  
+  After the user has answered all ten questions the answer buttons and question area is removed and the results are displayed.
+  The results diplayed consists of:
+  
+ A pie chart with a clear breakdown of the personalities that the answers resulted in.
+ ![pie chart with results](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/pie-chart.png)
+ 
+ And a frame showing the user what the winning result was along with a short explanatory text for the personality type and a restart button to let the user easily have another go at the game.
+ ![Winning personality type](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/restart-button.png)
 
   ### Pie Section
 
