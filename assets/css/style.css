@@ -79,13 +79,13 @@ input:focus {
   height: auto;
   text-align: center;
   position: absolute;
-  right: 5%;
+  right: 15%;
   top: 15%;
   padding: 3%;
 }
 
 #result-area p {
-  font-size: 1.5vw;
+  font-size: 2vw;
   padding: 5% 5% 5% 5%;
 }
 
@@ -187,13 +187,16 @@ input:focus {
 }
 
 #categories {
+  width: 20vw;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
 }
 
 #categories p {
-  font-size: 1vw;
+  font-size: 2vw;
   line-height: auto;
   margin-left: 1vw;
 }
@@ -219,7 +222,7 @@ input:focus {
 }
 
 #cat-color6 {
-  color: #271B16;
+  color: #442B22;
 }
 
 .selected {
@@ -289,14 +292,15 @@ footer {
 
   #result-area {
     margin-top: 50px;
+    right: 8%;
+    top: 22%;
     margin: auto;
-    position: static;
-    width: 60vw;
+    width: 30vw;
   }
 
   #pie-area {
     width: 70vw;
-    height: 25vh;
+    height: 30vh;
     padding: 5%;
     margin-bottom: 5%;
   }
@@ -340,10 +344,12 @@ footer {
 
   #result-area {
     width: 80vw;
+    top: 50%;
   }
 
   #result-area p {
     font-size: 6vw;
+    position: static;
   }
 
   #question-area {
