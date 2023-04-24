@@ -15,101 +15,87 @@
   const progress = document.querySelector('#progress');
 
   // Results //
-
   const resultArea = document.querySelector('#result-area');
-
   const pieArea = document.querySelector('#pie-area');
   const progressArea = document.querySelector('#progress');
-
   const catParagraph = document.querySelectorAll('.stats')
-
   const personalityHeader = document.querySelector('#personality');
   const personalityParagraph = document.querySelector('#personality-paragraph');
-
   const restartButton = document.querySelector('#start-again-div')
 
-  let result = [];
+  let userChoices = []; // Logs the users choice of each of the 6 answers for every question. //
 
-  // let currentQuestionIndex = 0;  <<--- If i can't make it work, perhaps I should re-think my approach and use this instead of questions.splice(0, 1) that I use on row.95
-  let userChoices = [];
-  let nameInput;
+  let result = []; // Function calls on userChoices and convert stats into percentage stats of each button pressed and returns it in the result variable //
 
-  // Name input and gamestart //
-  nameInput = document.getElementById('name-input');
-  // Learned more about arrow functions: https://www.youtube.com/watch?v=h33Srr5J9nY
+  let nameInput = document.getElementById('name-input'); // Name input and gamestart //
+
+  /**
+   * The function adds eventlisteners and executes the game after the user has entered a name. 
+   */
   function startGame(event) {
     event.preventDefault();
-    answers.forEach(choice => {
+    answers.forEach(choice => { // Learned more about arrow functions: https://www.youtube.com/watch?v=h33Srr5J9nY
       choice.addEventListener('click', () => {
         handleAnswer(choice);
       });
     });
 
-    // if username is entered quiz can start when button is pressed //
-    if (nameInput.value !== "") {
+    if (nameInput.value !== "") { // if username is entered quiz can start when button is pressed //
       answerArea.classList.remove('hide');
       startArea.classList.add('hide');
       addQuestions(0);
-
     } else {
-      // otherwise user is asked to enter name //
-      alert('Please enter your name to start the quiz.')
+      alert('Please enter your name to start the quiz.') // otherwise user is asked to enter name //
     }
 
   }
 
-  // To understand how to extract values from array: https://www.programiz.com/javascript/examples/extract-value-array //
-  // To understand more how a quiz works: https://www.youtube.com/watch?v=riDzcEQbX6k&t=881s //
+  /**
+   * The function populates html-elements with question and the corresponding six answers. In total 10 questions. 
+   */
   function addQuestions(index) {
     let activeQuestion = questions[index];
-    questionParagraph.innerHTML = activeQuestion.questionsText;
-    // Populate all 6 answer-buttons //
+    questionParagraph.innerHTML = activeQuestion.questionsText; //Populate Question
     let choices = activeQuestion.arrayAnswers;
-    for (let choice of choices) {
+    for (let choice of choices) { // Populate all 6 answer-buttons ( used w3Schools to learn more on loops https://www.w3schools.com/js/js_loop_for.asp) //
       let i = choices.indexOf(choice);
       answers[i].innerHTML = choice.answerText;
     }
-    // Qustion Progress x/10 //
-    let questionNumber = questions[0].questionNumber;
+    let questionNumber = questions[0].questionNumber; // Show the user the progress on the quiz x/10 //
     progress.innerHTML = `Question ${questionNumber} /10`;
-
 
   }
 
+  /**
+   * The function registers each answer and keeps count of the 10 questions, removes active question of the question array before calling 
+   * for function that populates the next round of question and answers. This function also provides button responsiveness.
+   * When 10 questions has been answered the function calls for result-related functions and hide/show necessary html-elements.
+   */
   function handleAnswer(target) {
     answers.forEach(choice => {
-      // Selected class provides user with responsiveness when selecting a choice
-      choice.classList.remove("selected");
-      // Disables buttons after selecting until next round of questions 
-      choice.disabled = true;
+      choice.classList.remove("selected"); // Selected class provides user with responsiveness when selecting a choice //
+      choice.disabled = true; // Disables buttons after selecting until next round of questions //
       if (choice !== target) {
-        // disable other buttons during timeout (prevent logging duplicate results)
-        choice.disabled = true;
+        choice.disabled = true; // disable other buttons during timeout (prevent logging duplicate results)
       } else {
         choice.classList.add("selected");
-        // logs the personality connected to that answer to userScore
-        //logScore();
-        logScore(choice);
+        logScore(choice); // logs the personality connected to that answer to userScore
         console.log(userChoices);
-        // Give a short delay between selecting an answer and getting the next question
-        setTimeout(function () {
-          // remove current question from array and replace with next question or calculate results if game ended
-          if (questions.length <= 1) {
-            answerArea.classList.add('hide');
-            resultArea.classList.remove('hide');
-            questionArea.classList.add('hide');
-            pieArea.classList.remove('hide');
-            progressArea.classList.add('hide');
-            restartButton.classList.remove('hide');
-            catParagraph.forEach(paragraph => {
+        setTimeout(function () { // Will give a short delay between selecting an answer and getting the next question
+          if (questions.length <= 1) { // Will calculate results if game ended or remove current question from array and replace with next question or 
+            answerArea.classList.add('hide'); // Removes answerbuttons if quiz is completed //
+            resultArea.classList.remove('hide'); // Reveals result div if quiz is completed //
+            questionArea.classList.add('hide'); // Removes question div if quiz is completed //
+            pieArea.classList.remove('hide'); // Reveals answer stats pie chart if quiz is completed //
+            progressArea.classList.add('hide'); // Removes progress if quiz is completed //
+            catParagraph.forEach(paragraph => { // Reveals all category stats paragraphs if quiz is completed //
               paragraph.classList.remove('hide');
             });
-
             answerResult(userChoices);
           } else {
-            questions.splice(0, 1);
-            addQuestions(0)
-            choice.classList.remove("selected");
+            questions.splice(0, 1); // Removes first question in array for each round //
+            addQuestions(0) // And calls for functin to populate html with next question and answers //
+            choice.classList.remove("selected"); // Removes active state of answer button for next round of answers //
             resetButton();
           }
         }, 300);
@@ -117,17 +103,24 @@
     });
   }
 
+  /** 
+   * The function takes the current question in the array, finds the corresponding point related to the given answer
+   * and logs the user choice into the userChoices array.
+   */
   function logScore(choice) {
-    const currentQuestion = questions[0]; // get the current question which is always 0 due to splice at row 85
+    const currentQuestion = questions[0]; // get the current question which is always 0 due to splice at row 110
     const selectedAnswer = currentQuestion.arrayAnswers.find(answer => answer.answerText === choice.innerText); // find the selected answer object
     const points = selectedAnswer.points; // get the points value from the selected answer object
     userChoices.push(points); // add the points value to the userChoices array
   }
 
   // Used this page to understand how to count number of times something appears in an array: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array //
+  /**
+   * The function takes the resulting array of logged user choices as an argument and calculates the choice stats in percentages and puts
+   * the values into an object called "result". Then it calls for functions that uses the result-object as an argument.
+   */
   function answerResult(userChoices) {
-    // I create an empty result object where each personality has 0% //w
-    result = {
+    result = { // I create an empty result object where each personality has 0% //w
       0: 0,
       1: 0,
       2: 0,
@@ -135,29 +128,29 @@
       4: 0,
       5: 0
     };
-    // Here I add a point (questions.arrayAnswers.point) to each personality in userChoices array //
-    userChoices.forEach(choice => {
+    userChoices.forEach(choice => { // Here I add a point (questions.arrayAnswers.point) to each personality in userChoices array //
       result[choice] += 1;
     });
     for (let key in result) {
-      // Evens up the result into an int that can be used as a percentage value // 
-      let percentage = Math.round((result[key] / userChoices.length) * 100);
+      let percentage = Math.round((result[key] / userChoices.length) * 100); // Evens up the result into an int that can be used as a percentage value // 
       result[key] = percentage;
     }
     populatePie(result);
     findWinner(result);
     populateStatParagraphs(result);
-    console.log("return result", result);
     return result;
 
   }
 
-  // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+  /**
+   * The function takes the result object (from answerResult function) and takes the key with the highest value, 
+   * which will be the winning personality and then calls for the winningPersonality function.
+   */
   function findWinner(result) {
     let maxPercentage = 0;
     let winningKey;
     for (let key in result) {
-      if (result[key] > maxPercentage) {
+      if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
         maxPercentage = result[key];
         winningKey = key;
       }
@@ -166,6 +159,10 @@
     return winningKey;
   }
 
+  /**
+   * The function takes the winningKey argument (from the findWinner function), brings out the corresponding key and values from personality array and then populates
+   * the necessary header and paragraph in the results-div.
+   */
   function winningPersonality(winningKey) {
     for (let i = 0; i < personalities.length; i++) {
       if (personalities[i].number.toString() === winningKey) {
@@ -176,18 +173,24 @@
     }
   }
 
-  // https://www.samanthaming.com/tidbits/76-converting-object-to-array/  //
+  /**
+   * The function converts the values from result object (answerResult function) to an array called pieArray, and then calls for the buildPie function 
+   * where the pieArray will be used to create a pie chart out of users results.
+   */
   function populatePie(results) {
     let pieArray = [];
     pieArray = Object.values(results);
-    pieArray.sort((a, b) => b - a);
+    pieArray.sort((a, b) => b - a); // https://www.samanthaming.com/tidbits/76-converting-object-to-array/  //
     buildPie(pieArray);
     return pieArray;
   }
 
+  /**
+   * The function uses the result object (answerResult function), sorts them in descending order and according to the name of each personality
+   *  before populating related html element to show how many percent the user got in each personality.
+   */
   function populateStatParagraphs(result) {
-    // Create a new object with renamed keys
-    const renamedResult = {
+    const renamedResult = { // Create a new object with renamed keys //
       Popular: result[0],
       Creative: result[1],
       Collector: result[2],
@@ -195,16 +198,15 @@
       Adventurer: result[4],
       Fashionista: result[5]
     };
-    // Sort the object by value in descending order
-    const sortedResult = Object.entries(renamedResult)
+
+    const sortedResult = Object.entries(renamedResult) // Sort the object by values in descending order //
       .sort(([, a], [, b]) => b - a)
       .reduce((acc, [key, value]) => ({
         ...acc,
         [key]: value
       }), {});
 
-    // Populate the paragraphs with the class name "stats"
-    const paragraphs = document.querySelectorAll('.stats');
+    const paragraphs = document.querySelectorAll('.stats'); // Populate the paragraphs with the class name "stats" through looping them out //
     let i = 0;
     for (let [key, value] of Object.entries(sortedResult)) {
       if (i >= paragraphs.length) break;
@@ -213,16 +215,18 @@
     }
   }
 
-
+  /**
+   * The function restarts the answer buttons for the next round of answers
+   */
   function resetButton() {
     answers.forEach(choice => {
       choice.disabled = false;
     });
   }
 
-  restartButton.addEventListener('click', function () {
+  restartButton.addEventListener('click', function () { // Adds an eventlistener to the restart quiz button in the end //
     window.location.reload();
-});
+  });
 
   //------------------------------------------------------------------------------------------//
   //-------------------------------------- Questions Array----------------------------------- //

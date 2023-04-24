@@ -1,18 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Dela+Gothic+One&display=swap");
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  border: none;
+  padding: 0;
   font-size: 1.5vw;
 }
 
 body {
   background: rgb(0, 0, 0);
-  padding: 0;
-  margin: 0;
   height: 100vh;
   width: 100vw;
   color: #EB4826;
   font-family: 'Dela Gothic One', sans-serif;
-
 }
+
+/* Headings & Paragraphs */
 
 h1 {
   font-size: 5vw;
@@ -115,7 +119,6 @@ input:focus {
   background-color: #EB4826;
   color: black;
 }
-
 
 #restart-button {
   border: 2px solid black;
@@ -222,7 +225,13 @@ input:focus {
   display: none;
 }
 
-@media (max-width: 1120px) {
+/*######################################
+####//////////////\\\\\\\\\\\\\\\\\\####
+## V(-___-)V Media Queries V(-___-)V ###
+####\\\\\\\\\\\\(o_O)///////////////####
+##################################### */
+
+@media (max-width: 1170px) {
 
   .start-area {
     position: static;
@@ -242,12 +251,12 @@ input:focus {
   }
 
   #pie-area {
-    width: 60vw;
+    width: 70vw;
   }
 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
 
   * {
     font-size: 4vw;
@@ -306,4 +315,5 @@ input:focus {
     font-size: 5vw;
     width: 35vw;
   }
+
 }
