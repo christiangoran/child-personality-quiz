@@ -19,6 +19,7 @@ body {
 /* Headings & Paragraphs */
 
 h1 {
+  margin: 1%;
   font-size: 5vw;
   line-height: 90%;
 }
@@ -80,6 +81,7 @@ input:focus {
   position: absolute;
   right: 15%;
   top: 25%;
+  padding: 5%;
 }
 
 #result-area p {
@@ -89,6 +91,11 @@ input:focus {
 
 #question-area {
   width: 30vw;
+  margin: 1%;
+}
+
+#progress {
+  margin: 1%;
 }
 
 #name-input {
@@ -106,7 +113,7 @@ input:focus {
   border: 2px solid #EB4826;
   font-size: 2vw;
   width: 20vw;
-  height: 10vh;
+  height: auto;
   margin: 0.5em;
   display: inline-block;
   background-color: transparent;
@@ -182,12 +189,13 @@ input:focus {
 #categories {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: space-evenly;
 }
 
 #categories p {
   font-size: 2vw;
-  line-height: 0%;
+  line-height: auto;
+  margin-left: 1vw;
 }
 
 #cat-color1 {
@@ -231,7 +239,7 @@ input:focus {
 ####\\\\\\\\\\\\(o_O)///////////////####
 ##################################### */
 
-@media (max-width: 1170px) {
+@media (max-width: 1220px) {
 
   .start-area {
     position: static;
@@ -241,17 +249,24 @@ input:focus {
 
   .answer-area {
     position: static;
-    margin: auto;
+    margin: 5% auto;
   }
 
   #result-area {
-    padding-top: 20px;
-    position: static;
+    margin-top: 50px;
     margin: auto;
+    position: static;
+    width: 80vw;
   }
 
   #pie-area {
     width: 70vw;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
+
+  #restart-button {
+    width: auto;
   }
 
 }
@@ -267,7 +282,7 @@ input:focus {
   }
 
   h2 {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   p {
@@ -294,6 +309,10 @@ input:focus {
     font-size: 3vw;
     width: 38vw;
     height: 10vh;
+  }
+
+  .start-area {
+    margin-top: 20%;
   }
 
   #start-button {
