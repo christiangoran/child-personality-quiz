@@ -26,6 +26,8 @@
   const personalityHeader = document.querySelector('#personality');
   const personalityParagraph = document.querySelector('#personality-paragraph');
 
+  const restartButton = document.querySelector('#start-again-div')
+
   let result = [];
 
   // let currentQuestionIndex = 0;  <<--- If i can't make it work, perhaps I should re-think my approach and use this instead of questions.splice(0, 1) that I use on row.95
@@ -98,6 +100,7 @@
             questionArea.classList.add('hide');
             pieArea.classList.remove('hide');
             progressArea.classList.add('hide');
+            restartButton.classList.remove('hide');
             catParagraph.forEach(paragraph => {
               paragraph.classList.remove('hide');
             });

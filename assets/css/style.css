@@ -102,7 +102,7 @@ input:focus {
   border: 2px solid #EB4826;
   font-size: 2vw;
   width: 20vw;
-  height: 8wv;
+  height: 8vh;
   margin: 0.5em;
   margin-top: 0.5em;
   display: inline-block;
@@ -113,6 +113,27 @@ input:focus {
 }
 
 #start-button:hover {
+  background-color: #EB4826;
+  color: black;
+}
+
+
+#restart-button {
+  border: 2px solid black;
+  font-size: 1.5vw;
+  width: 20vw;
+  height: 5wv;
+  margin: 0.5em;
+  margin-top: 0.5em;
+  display: inline-block;
+  background-color: transparent;
+  padding: 5% 10%;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#restart-button:hover {
   background-color: #EB4826;
   color: black;
 }
@@ -196,7 +217,6 @@ input:focus {
   background: #EB4826;
   color: black;
   box-shadow: 0 0 305px #EB4826;
-
 }
 
 .hide {
@@ -263,7 +283,7 @@ input:focus {
   }
 
   .answer-button {
-    font-size: 3.5vw;
+    font-size: 3vw;
     width: 38vw;
     height: 10vh;
   }
@@ -271,7 +291,12 @@ input:focus {
   #start-button {
     font-size: 3.5vw;
     width: 38vw;
-    height: 5vh;
+    height: 7vh;
+  }
+
+  #restart-button {
+    font-size: 3.5vw;
+    width: 35vw;
   }
 
   #categories {
