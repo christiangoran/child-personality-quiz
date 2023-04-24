@@ -233,6 +233,16 @@ input:focus {
   display: none;
 }
 
+
+#footer-div {
+  color: #EB4826;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /*######################################
 ####//////////////\\\\\\\\\\\\\\\\\\####
 ## V(-___-)V Media Queries V(-___-)V ###

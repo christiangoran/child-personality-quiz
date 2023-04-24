@@ -1,108 +1,307 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Child Type Quiz
+Portfolio Project 2
 
-Welcome Christian Göran,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This is the documentation for my web application: What Type of Kid Were You Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Website mockup](/workspace/child-personality-quiz/assets/wireframes/actual-site.png)
 
-## Gitpod Reminders
+## UX
+Strategy Plane
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Project Purpose:
+The purpose of this project is to create an engaging and interactive personality quiz that helps users discover what type of child they were. By answering a series of questions, users will be able to uncover traits and characteristics that were present during their childhood. This quiz will be created using JavaScript to provide a dynamic and interactive experience for users, with the final results being displayed at the end of the quiz. The quiz will not only provide entertainment for users but also encourage self-reflection and introspection, helping them to gain a better understanding of themselves and their own unique personalities.
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+Client Goals:
 
-Another blue button should appear to click: _Open Browser_.
+For my second portfolio project on my Diploma in Web Application Development with Code Institute, I created a child personality quiz as a learning tool for interactive frontend development and my first project using JavaScript. The goal of this project is to create an engaging and informative tool that helps users discover what type of child they were. By offering a unique and personalized experience, the quiz aims to attract a wide range of users and can be used as an engaging element on a larger web site. For education purposes I will treat this project as a real-world application.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+ The client also hopes that the quiz will drive engagement with their brand and help them better understand the needs and preferences of their audience.
 
-A blue button should appear to click: _Make Public_,
+Engaging users with interactivity and a fun application on their site
+Allowing users to learn more about themselves and their unique childhood traits
+Providing insights and recommendations on how to work with different types of children
 
-Another blue button should appear to click: _Open Browser_.
+User Goals:
+The primary goal for users taking this quiz is to gain a deeper understanding of their own childhood personality traits and to have fun! By answering a series of questions related to their childhood experiences and behaviors, users can receive a personalized result that highlights their unique perspective and helps them better understand themselves. The main purpose is however to bring the user down memory lane and hopefully remember situations and items that was important to them when growing up.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+User goals:
 
-To log into the Heroku toolbelt CLI:
+- Learning more about themselves and their childhood traits
+- Having fun doing a short quiz
+- Having a nice walk down memory lane
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Opportunities
 
-------
 
-## Release History
+| Opportunity | Importance | Viability / Feasability |
+|-------------|------------|-------------------------|
+| Create an online presence | 5 | 5 |
+| Creating a responsive quiz | 5 | 5 |
+| Create a pie chart displaying user result | 5 | 5 |
+| Create en engaging extra element for a larger website | 5 | 5 |
+| Provide a display of progress in quiz | 5 | 5 |
+| Create a short text explaining the winning personality | 5 | 5 |
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Scope:
+Create a childhood personality quiz containing 10 questions, with 6 answers for each question and related 6 personalities.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- What will be included in the website is:
+  - Large header as a part of a brutalist type designed website.
+  - Introduction text
+  - Question area
+  - Answer area with 6 buttons
+  - Results area
+  - Pie chart area
+  - Restart game button
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Every question and corresponding answers are tied to 6 personalities and explanatory texts:
+- The Popular Kid
+  - You were social and outgoing as a child, and likely had a large circle of friends. You enjoyed being the center of attention and were interested in fashion, pop culture, and the latest trends.
+- The Creative Type
+  - You were imaginative and artistic as a child, and enjoyed expressing yourself through various forms of creativity, such as drawing, writing, or music.
+- The Collector
+  - You had a love for collecting things as a child, whether it was Beanie Babies, Pokemon cards, or other toys. You were likely organized and detail-oriented, and enjoyed the thrill of completing a set.
+- The Tech-Savvy Kid
+  - You were fascinated by technology and video games as a child, and were likely an early adopter of new gadgets and devices. You enjoyed problem-solving and exploring new worlds through the screen.
+- The Adventurous One
+  - You were active and outgoing as a child, and enjoyed trying new things and exploring the outdoors. You had a thirst for adventure and likely participated in sports or other physical activities.
+- The Fashionista
+  - You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance.  
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Each time the user selects an answer it builds up the resulting picture of the user personality. At the end of the quiz the user will see the winning personality as well as a breakdown of their personality.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Design & Structure
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Wirefram Mockups and Color Card
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+I began by using the program Balsamiq, which was recommended by the Code Institute, to create low-fidelity wireframes that would help me organize the information priorities and site structure and get a sense of the size of each page.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Quiz build wireframe](/workspace/child-personality-quiz/assets/wireframes/project2-wireframes.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+After establishing the general structure of each page, I moved on to creating a full-color and image mockup in Figma to test the color selection I had decided on. I got inspired by the style Brutalism or Neo-Brutalism and chose my color scheme. High contrast and bold minimalistic design compositions with thick sans-serif fonts is typical for this type of design.
+I thought the Brutalism style worked well in giving a touch of retro minimalistic commodore terminal feel to the design without being to obvious.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Main page color mockup](/workspace/child-personality-quiz/assets/wireframes/project2-mockup.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Color and Font-Family Card](/workspace/child-personality-quiz/assets/wireframes/project2-color-card.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Structure 
 
-------
+The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to users' expectations and making everything as intuitive as I could.
 
-## FAQ about the uptime script
+The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code at different points in the game. There are 5 main divs within the page which appear and disappear depending on where you are in the game, these are:
 
-**Why have you added this script?**
+- Start Area - a brief intro with a name capture input to personalise the user's results and a start game button
+Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
+- Question Area - the results of the quiz, showing the user's personality results breakdown in the form of a pie chart and text information as well as a recommended destination based on their responses to the quiz. This page also contains a button to take the user back to the start to begin the quiz again.
+- Answer Area - Here the buttons with the answers related to the question appears when the game starts.
+- Result Area - After all the questions are answered the result area appears with the winning personality and an eplanatory text related to the personality
+- Pie Chart Area - Here the different personalities are broken down for the user.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+There is also a 404 page for when a user lands on a non-existent page with a button to link back to index.html to start the quiz again
 
-**How will this affect me?**
+Both the main index.html and 404 page contain a footer, containing my name and social links.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Design Choices
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- An extremely minimalistic deisng as a design exploration into the style of Brutalism and I also think went well with a touch of retro into the design without being to obvoius with it.
+- consistent use och border radius to give a soft, rounded feel
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Technologies Used
 
-**So….?**
+### Languages
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- HTML
+- CSS
+- JavaScript
 
-**Can I opt out?**
+### Tools 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Git
+  - Used for version control via GitPod by using the terminal to Git and Push to GitHub
+- GitHub
+  - Used to store the project code after being created in GitPod / Git
+- Gitpod
+  - Used to create, edit & preview the project's code
+- Balsamiq 
+  - Was used to create the wireframe of the website
+- Figma
+  - Used to develop a full mockup including colours, fonts, proportions etc
+- Google Fonts
+  - Used to select & import the fonts to the project (Dela Gothic One & Darker Grotesque)
+- Font Awesome
+  - Used to add icons to the site
+- Adobe Illustrator
+  - Used to create the finished website mockup with two screen sizes
+- Favicon.io
+  - Used to create and add the favicon to the browser tab
+- Chart.js
+  - Used to create and style the pie chart based on user personality results
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  ## Features
 
-**Anything more?**
+  ### All pages
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  #### **Favicon** 
 
----
+  #### **Footer**
 
-Happy coding!
+  *Footer on desktop / tablet*
+
+  *Footer on mobile*
+
+  ### Start Section
+
+  ### Quiz Section
+
+  ### Result Section
+
+  ### Pie Section
+
+  ## Future Features
+
+
+Quiz - Child Personality Type
+What type of child were you?
+
+What was your favorite toy as a child?
+a) Barbie dolls
+b) Legos
+c) Beanie Babies
+d) Tamagotchi
+e) Power Rangers action figures
+f) Polly Pocket
+
+Which of the following movies did you love as a child?
+a) The Lion King
+b) Toy Story
+c) Home Alone
+d) Babe - A little pig goes a long way
+e) Harry Potter and the Philosopher's Stone
+f) The Mighty Ducks
+
+Which of these TV shows did you watch the most as a child?
+a) Rugrats
+b) Pokemon
+c) Power Rangers
+d) Hey Arnold!
+e) DuckTales
+f) Sailor Moon
+
+Which of these video games did you enjoy playing the most as a child?
+a) Super Mario Bros.
+b) Sonic the Hedgehog
+c) The Legend of Zelda: Ocarina of Time
+d) Pokemon Red/Blue
+e) Crash Bandicoot
+f) Donkey Kong Country
+
+Which of these snacks did you love as a child?
+a) Snickers bar
+b) Haribo gummy bears
+c) Kinder Surprise chocolate eggs
+d) Fizzy cola bottles
+e) Hubba Bubba bubble gum
+f) Skittles
+
+Which of these pop stars did you idolize as a child?
+a) Britney Spears
+b) NSYNC
+c) Oasis
+d) Backstreet Boys
+e) Ace of Base
+f) Spice Girls
+
+Which of these trends did you participate in as a child?
+a) Beanie Babies collecting
+b) Game Boy hard core gaming
+c) Garbage Pail Kids cards
+d) Turtles Action Figures
+e) Platform shoes
+f) Mood ring wearing
+
+Which of these board games did you enjoy playing the most as a child?
+a) Monopoly
+b) Candy Land
+c) Clue
+d) Life
+e) Sorry!
+f) Operation
+
+Which of these outdoor activities did you enjoy the most as a child?
+a) Jump rope
+b) Hide and Seek
+c) Hopscotch
+d) Playing marbles
+e) Four Square
+f) Soccer
+
+Which of these school subjects did you excel in the most as a child?
+a) Math
+b) Science
+c) English
+d) Art
+e) Social Studies
+f) Physical Education
+
+Personality types:
+a) The popular kid
+b) The creative type
+c) The collector
+d) The tech-savvy kid
+e) The adventurous one
+f) The fashionista
+
+a) The popular kid - You were social and outgoing as a child, and likely had a large circle of friends. You enjoyed being the center of attention and were interested in fashion, pop culture, and the latest trends.
+b) The creative type - You were imaginative and artistic as a child, and enjoyed expressing yourself through various forms of creativity, such as drawing, writing, or music.
+c) The collector - You had a love for collecting things as a child, whether it was Beanie Babies, Pokemon cards, or other toys. You were likely organized and detail-oriented, and enjoyed the thrill of completing a set.
+d) The tech-savvy kid - You were fascinated by technology and video games as a child, and were likely an early adopter of new gadgets and devices. You enjoyed problem-solving and exploring new worlds through the screen.
+e) The adventurous one - You were active and outgoing as a child, and enjoyed trying new things and exploring the outdoors. You had a thirst for adventure and likely participated in sports or other physical activities.
+f) The fashionista -  wi
+
+Scoring:
+For each answer, assign points as follows:
+a = 1 point
+b = 2 points
+c = 3 points
+d = 4 points
+e = 5 points
+f = 6 points
+
+Add up the points for all 10 questions to determine the user's personality type:
+10-20 points = The Adventurer
+21-30 points = The Thinker
+31-40 points = The Leader
+41-40 points = The Nurturer
+
+Errors:
+
+userScore()
+
+I want userScore function to take the value from a clicked element/button and its corresponding key/value in an object in an array called answers, and then store it into another array called logPoints[].
+Credits:
+
+Special thanks to my mentor Garreth McGirr for the tips and guidance.
+
+I used https://www.fontpair.com to find a matching font pair for the project.
+
+I used https://www.upscale.media to upscale low res images.
+
+I learned flexbox from www.flexboxfroggy.com .
+
+WebDev Simplified - Quiz App tutorial: https://www.youtube.com/watch?v=riDzcEQbX6k
+
+https://www.programiz.com/javascript/examples/extract-value-array
+
+
+
+
+
+
