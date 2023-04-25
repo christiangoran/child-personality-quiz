@@ -332,29 +332,13 @@ During development and testing I found the following bugs:
 I tried to remove the hover function for smaller screen sizes. However this did not work well. There seem to be several options to explore for touch displays and I will add this function to a 
 future version of the website.
 
-*Before & After*
-
 - - -
-#### **2: Problem statement **
-
-problem statement
-
-*Before & After*
-
-<details><summary>Screenshots</summary>
-<img src="url">
-<img src="url">
-*Before & After*
-</details>
-
-- - -
-
-- - -
-
 
 ### Known & Remaining Bugs
 
-All information about remaining bugs is included in the information above. Click on the links below to find out more details:
+Remaining bugs:
+
+- The hover effect sticks on touch screen devices and will be fixed in an upcoming update.
 
 
 
