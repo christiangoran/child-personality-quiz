@@ -242,7 +242,8 @@ input:focus {
 
 footer {
   position: fixed;
-  bottom: 10px;
+  height: 40px;
+  bottom: 0px;
   width: 100%;
   background-color: black;
 }
@@ -377,10 +378,6 @@ footer {
     font-size: 3vw;
     width: 38vw;
     height: 10vh;
-  }
-  .answer-button:hover {
-    background: black;
-    color: #EB4826;
   }
 
   .start-area {
