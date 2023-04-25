@@ -236,7 +236,7 @@ input:focus {
 
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
 }
 
@@ -267,6 +267,14 @@ footer {
 .fa-youtube,
 .fa-facebook {
   font-size: 2vw;
+  opacity: 0.8;
+}
+
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-facebook:hover {
+  opacity: 1;
 }
 
 /*######################################
@@ -319,6 +327,7 @@ footer {
   font-size: 4vw;
 }
 
+
 }
 
 @media (max-width: 550px) {
@@ -361,6 +370,10 @@ footer {
     font-size: 3vw;
     width: 38vw;
     height: 10vh;
+  }
+  .answer-button:hover {
+    background: black;
+    color: #EB4826;
   }
 
   .start-area {
