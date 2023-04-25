@@ -1,5 +1,7 @@
-# Child Type Quiz
+# What Type of Child Were You Quiz
 Portfolio Project 2
+
+![Website mockup](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/actual-site.png)
 
 ## Table of Contents
 
@@ -20,8 +22,6 @@ Portfolio Project 2
 ## Introduction
 
 This is the documentation for my web application: What Type of Kid Were You Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
-
-![Website mockup](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/actual-site.png)
 
 ## UX
 Strategy Plane
