@@ -227,7 +227,7 @@ The start section contains the header clearly giving the user an idea of what th
 
 - - -
 ## Testing & Bugs
-[See TESTING.md for full breakdown of testing & bugs](testing.md)
+[See TESTING.md for full breakdown of testing & bugs](https://github.com/christiangoran/child-personality-quiz/blob/main/TESTING.md)
 
 - - -
 ## Deployment
@@ -278,6 +278,9 @@ Errors:
   - https://w3schools.com
   - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PL5riBBhIsrRSUaNZA2kendinzU5oDxkgG&index=13&t=993s
   - https://www.youtube.com/watch?v=y17RuWkWdn8&list=PL5riBBhIsrRSUaNZA2kendinzU5oDxkgG&index=14&t=240s
+  - https://www.samanthaming.com/tidbits/76-converting-object-to-array/
+  - https://stackoverflow.com/questions/47314124/calling-variables-from-another-function
+  - https://dev.to/sumusiriwardana/javascript-functions-explain-like-i-m-five-5009
   
 - Special thanks to my mentor Garreth McGirr for the tips and guidance.
 
