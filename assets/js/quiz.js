@@ -1,5 +1,4 @@
   // Consts for Start area //
-  const startButton = document.getElementById('start-button');
   const startArea = document.querySelector('.start-area');
 
   // Consts for questions //
@@ -10,7 +9,6 @@
   // Consts for answers //
   const answerArea = document.querySelector('.answer-area');
   const answers = Array.from(document.querySelectorAll('.answer-button'));
-  const answerButtons = document.querySelectorAll('.answer-button');
 
   const progress = document.querySelector('#progress');
 
@@ -108,7 +106,7 @@
    * and logs the user choice into the userChoices array.
    */
   function logScore(choice) {
-    const currentQuestion = questions[0]; // get the current question which is always 0 due to splice at row 110
+    const currentQuestion = questions[0]; // get the current question which is always 0 due to splice at row 94
     const selectedAnswer = currentQuestion.arrayAnswers.find(answer => answer.answerText === choice.innerText); // find the selected answer object
     const points = selectedAnswer.points; // get the points value from the selected answer object
     userChoices.push(points); // add the points value to the userChoices array
