@@ -130,16 +130,16 @@
       result[choice] += 1;
     });
     for (let key in result) {
-      if (result.hasOwnProperty(key)) {
-        let percentage = Math.round((result[key] / userChoices.length) * 100); // Evens up the result into an int that can be used as a percentage value // 
-        result[key] = percentage;
-      }
-      populatePie(result);
-      findWinner(result);
-      populateStatParagraphs(result);
-      return result;
+      let percentage = Math.round((result[key] / userChoices.length) * 100); // Evens up the result into an int that can be used as a percentage value // 
+      result[key] = percentage;
     }
+    populatePie(result);
+    findWinner(result);
+    populateStatParagraphs(result);
+    console.log('result is', result);
+    return result;
   }
+
 
   /**
    * The function takes the result object (from answerResult function) and takes the key with the highest value, 
@@ -149,12 +149,11 @@
     let maxPercentage = 0;
     let winningKey;
     for (let key in result) {
-      if (result.hasOwnProperty(key)) {
-        if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
-          maxPercentage = result[key];
-          winningKey = key;
-        }
+      if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+        maxPercentage = result[key];
+        winningKey = key;
       }
+
     }
     winningPersonality(winningKey);
     return winningKey;

@@ -318,22 +318,23 @@ footer {
     padding: 5%;
     margin-bottom: 5%;
   }
+
   #categories h3 {
     font-size: 2vw;
     margin-left: 1vw;
   }
-  
+
 
   #restart-button {
     width: auto;
   }
 
-.fa-instagram,
-.fa-twitter,
-.fa-youtube,
-.fa-facebook {
-  font-size: 4vw;
-}
+  .fa-instagram,
+  .fa-twitter,
+  .fa-youtube,
+  .fa-facebook {
+    font-size: 4vw;
+  }
 
 
 }

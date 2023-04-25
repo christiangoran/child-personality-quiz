@@ -102,7 +102,7 @@ of the console the warnings were reduced to 4 warnings, 1 undefined variable, 3 
 
 Warning: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
 
-* Fix: I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
+* I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
 for...in loop without checking whether the object has its own property or the inherited property from its prototype.
 
     //To fix this issue, I used the hasOwnProperty method to check whether the property belongs to the object or its prototype.
@@ -122,6 +122,8 @@ for...in loop without checking whether the object has its own property or the in
     }
   }
    ```
+However when adding the if(result.hasOwnProperty(key)) statement the calculations stops working and the percentage values of the different personalities does not add up to 100%. Since the site and the code is working as it is, I made the decision to leave this as it is for now.
+
  Warning: 'Object spread property' is only available in ES9
  
  * I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
@@ -205,8 +207,8 @@ There were 2 issues of concern:
 1. The performance score was somewhat lower because of the piechart.js file with the pieChart function that seem to slow the process down. However the 
 score is still on an acceptable level.
 
-2. The SEO score was somewhat lower as well due to missing meta text i the HTML. The solution for this was to define keywords and a description of the 
-web site.
+2. The SEO score was somewhat lower as well due to missing meta text i the HTML. 
+* Fix: The solution for this was to define keywords and a description of the web site.
 
 
 #### **Final Results**
@@ -260,9 +262,8 @@ The site was tested on the following browsers.
 * Mozilla Firefox v.112.0.1
 
 **Bugs found - specific to browser testing:**
-* [Console Error - Permissions Policy Header: on Chrome](#10-console-error-on-chrome-error-with-permissions-policy-header)
-* [IPhone 5S Safari 12.0 - Various Bugs](#11-iphone-5s-safari-120---various-bugs)
 
+* Google Chrome and Safari gives white placeholder text in the start area name text field.
 
 - - -
 ### Feature Testing Results Table
@@ -321,17 +322,6 @@ The site was tested on the following browsers.
 | Start Again Button | Hover effect with transition on hover | Hovering over button | Button hover effect works correctly | Pass |
 | Start Again Button | Refreshes page, hides results div and reveals start div | Clicking Start Again button and checking the page reloads back to the start page | The page reloads correctly back to the start div | Pass |
 
-**404 Page**
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| 404 page contents | Heading, text & 'go home' button appear correctly | Load 404 page, check all content is correct | All content appears correctly | Pass |
-| 404 page functionality | Typing in a non-existent URL will bring up 404 page | Typing in a non-existent url on website | 404 page appears | Pass |
-| Go Home Button | Hover effect with transition on hover | Hovering over Go Home button | Button hover effect works correctly ![Screen Recording](docs/testing/testing_features_404_1.gif) | Pass |
-| Go Home Button | Refreshes page, hides results div and reveals welcome div | Clicking on Go Home button | Welcome page loads ![Screen Recording](docs/testing/testing_features_404_2.gif) | Pass |
-
-
-
 - - -
 ## Bugs & Fixes
 
@@ -339,7 +329,8 @@ During development and testing I found the following bugs:
 - - -
 #### **1: Hover function on buttons does not work with touch screen devices **
 
-I needed to remove hover effect on smallest media queries for screen size.
+I tried to remove the hover function for smaller screen sizes. However this did not work well. There seem to be several options to explore for touch displays and I will add this function to a 
+future version of the website.
 
 *Before & After*
 
