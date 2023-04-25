@@ -18,7 +18,7 @@
   const resultArea = document.querySelector('#result-area');
   const pieArea = document.querySelector('#pie-area');
   const progressArea = document.querySelector('#progress');
-  const catParagraph = document.querySelectorAll('.stats')
+  const catParagraph = document.querySelectorAll('.stats');
   const personalityHeader = document.querySelector('#personality');
   const personalityParagraph = document.querySelector('#personality-paragraph');
   const restartButton = document.querySelector('#start-again-div')
@@ -150,11 +150,13 @@
     let maxPercentage = 0;
     let winningKey;
     for (let key in result) {
+        if (result.hasOwnProperty(key)) {
       if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
         maxPercentage = result[key];
         winningKey = key;
       }
     }
+   }
     winningPersonality(winningKey);;
     return winningKey;
   }
@@ -626,4 +628,4 @@
       name: 'The Fashionista',
       text: "You were stylish and trendy as a child, and enjoyed experimenting with fashion and accessories. You had a keen eye for design and aesthetics, and enjoyed expressing yourself through your appearance."
     },
-  ]
+  ];
