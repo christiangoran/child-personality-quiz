@@ -131,7 +131,6 @@ input:focus {
   border: 2px solid black;
   font-size: 1.5vw;
   width: 20vw;
-  height: 5wv;
   margin: 0.5em;
   margin-top: 0.5em;
   display: inline-block;
@@ -197,7 +196,6 @@ input:focus {
 
 #categories p {
   font-size: 2vw;
-  line-height: auto;
   margin-left: 1vw;
 }
 
@@ -306,7 +304,6 @@ footer {
   }
   #categories p {
     font-size: 2vw;
-    line-height: auto;
     margin-left: 1vw;
   }
   
