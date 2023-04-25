@@ -226,6 +226,15 @@ The start section contains the header clearly giving the user an idea of what th
   The pie chart has a clear breakdown of the personalities that the answers resulted in.
  ![pie chart with results](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/pie-chart.png)
 
+  ### 404 Page
+
+  ![404 Page](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/404.png)
+
+  * 404 page to smoothly handle user's who have ended up on a non-existent part of the site
+  * This bespoke 404 page provides a positive emotional response to the user and a better user experience
+  * The page has the same design as the rest of the site, so the users don't feel like they have left the site, encouraging them to return to the home page
+  * The text is light hearted and relevant to the theme of the quiz
+
 - - -
 ## Testing & Bugs
 [See TESTING.md for full breakdown of testing & bugs](https://github.com/christiangoran/child-personality-quiz/blob/main/TESTING.md)
