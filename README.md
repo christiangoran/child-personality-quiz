@@ -259,10 +259,6 @@ You can clone the repository to use locally by following these steps:
 5. Open your IDE of choice (git must be installed for the next steps)
 6. Type git clone copied-git-url into the IDE terminal
 
-
-Errors:
-
-
 ## Credits
 
 - http://Chart.js used for creating the pie chart
