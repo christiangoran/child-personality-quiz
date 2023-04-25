@@ -19,7 +19,7 @@
   const catParagraph = document.querySelectorAll('.stats');
   const personalityHeader = document.querySelector('#personality');
   const personalityParagraph = document.querySelector('#personality-paragraph');
-  const restartButton = document.querySelector('#start-again-div')
+  const restartButton = document.querySelector('#start-again-div');
 
   let userChoices = []; // Logs the users choice of each of the 6 answers for every question. //
 
@@ -43,7 +43,7 @@
       startArea.classList.add('hide');
       addQuestions(0);
     } else {
-      alert('Please enter your name to start the quiz.') // otherwise user is asked to enter name //
+      alert('Please enter your name to start the quiz.'); // otherwise user is asked to enter name //
     }
 
   }
@@ -92,7 +92,7 @@
             answerResult(userChoices);
           } else {
             questions.splice(0, 1); // Removes first question in array for each round //
-            addQuestions(0) // And calls for functin to populate html with next question and answers //
+            addQuestions(0); // And calls for functin to populate html with next question and answers //
             choice.classList.remove("selected"); // Removes active state of answer button for next round of answers //
             resetButton();
           }
@@ -130,14 +130,15 @@
       result[choice] += 1;
     });
     for (let key in result) {
-      let percentage = Math.round((result[key] / userChoices.length) * 100); // Evens up the result into an int that can be used as a percentage value // 
-      result[key] = percentage;
+      if (result.hasOwnProperty(key)) {
+        let percentage = Math.round((result[key] / userChoices.length) * 100); // Evens up the result into an int that can be used as a percentage value // 
+        result[key] = percentage;
+      }
+      populatePie(result);
+      findWinner(result);
+      populateStatParagraphs(result);
+      return result;
     }
-    populatePie(result);
-    findWinner(result);
-    populateStatParagraphs(result);
-    return result;
-
   }
 
   /**
@@ -148,14 +149,14 @@
     let maxPercentage = 0;
     let winningKey;
     for (let key in result) {
-        if (result.hasOwnProperty(key)) {
-      if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
-        maxPercentage = result[key];
-        winningKey = key;
+      if (result.hasOwnProperty(key)) {
+        if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+          maxPercentage = result[key];
+          winningKey = key;
+        }
       }
     }
-   }
-    winningPersonality(winningKey);;
+    winningPersonality(winningKey);
     return winningKey;
   }
 
@@ -581,7 +582,7 @@
         }
       ]
     }
-  ]
+  ];
 
 
   //------------------------------------------------------------------------------------------//

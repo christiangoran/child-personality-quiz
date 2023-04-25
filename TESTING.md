@@ -119,7 +119,8 @@ for...in loop without checking whether the object has its own property or the in
         winningKey = key;
       }
     }
-   }
+    }
+  }
    ```
  Warning: 'Object spread property' is only available in ES9
  
@@ -170,9 +171,13 @@ There were no errors. However I had 6 warnings.
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/accessibility-warnings.png">
 </details>
 
-* Fix: change <p> to <h3>
+* Fix: change <p> to <h3> 
+* Comment: After the change to <h3> element I got a new warning saying I skipped over <h2>, this is however not the case, but due to the design of the web site, an <h2> element comes further down 
+on the site. To balance out the design/accessibility I decided to keep the structure as it is and limit the change from <p> elements to <h3> elements.
 
-There were no errors or warnings on 404.html.
+<details><summary>Accessibility warnings</summary>
+<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/wave-improvements.png">
+</details>
 
 #### **Wave Web Accessibility Results Post-Fix **
 
@@ -206,10 +211,11 @@ web site.
 
 #### **Final Results**
 <details><summary>Main Page</summary>
-<img src="docs/testing/testing_lh_main_desktop_final.jpeg">
+<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/lighthouse-improvements.png">
 </details>
 
 - - -
+
 ## Manual Testing
 ### Testing User Stories
 
