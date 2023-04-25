@@ -79,6 +79,7 @@ Create a childhood personality quiz containing 10 questions, with 6 answers for 
   - Results area
   - Pie chart area
   - Restart game button
+  - 404 page
 
 Every question and corresponding answers are tied to 6 personalities and explanatory texts:
 - The Popular Kid
