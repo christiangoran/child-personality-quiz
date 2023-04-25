@@ -1,6 +1,22 @@
 # Child Type Quiz
 Portfolio Project 2
 
+## Table of Contents
+
+0. [Introduction](#introduction)
+1. [Project Development & Planning](#project-development--planning)
+    * [Project Goals](#project-goals)
+    * [Research](#research)
+    * [User Stories](#user-stories)
+    * [Content](#content)
+    * [Design, Layout & Structure](#design-layout--structure)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [JavaScript Functionality](#javascript-functionality)
+5. [Testing & Bugs](#testing--bugs)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+
 ## Introduction
 
 This is the documentation for my web application: What Type of Kid Were You Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
@@ -194,137 +210,56 @@ The start section contains the header clearly giving the user an idea of what th
   ### Result Section
   
   After the user has answered all ten questions the answer buttons and question area is removed and the results are displayed.
-  The results diplayed consists of:
-  
- A pie chart with a clear breakdown of the personalities that the answers resulted in.
- ![pie chart with results](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/pie-chart.png)
  
  And a frame showing the user what the winning result was along with a short explanatory text for the personality type and a restart button to let the user easily have another go at the game.
  ![Winning personality type](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/restart-button.png)
 
   ### Pie Section
+  
+  After the game is over a pie chart is revealed as well.
+  The pie chart has a clear breakdown of the personalities that the answers resulted in.
+ ![pie chart with results](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/pie-chart.png)
 
   ## Future Features
 
+- - -
+## Testing & Bugs
+[See TESTING.md for full breakdown of testing & bugs](testing.md)
 
-Quiz - Child Personality Type
-What type of child were you?
+- - -
+## Deployment
 
-What was your favorite toy as a child?
-a) Barbie dolls
-b) Legos
-c) Beanie Babies
-d) Tamagotchi
-e) Power Rangers action figures
-f) Polly Pocket
+### GitHub Pages
 
-Which of the following movies did you love as a child?
-a) The Lion King
-b) Toy Story
-c) Home Alone
-d) Babe - A little pig goes a long way
-e) Harry Potter and the Philosopher's Stone
-f) The Mighty Ducks
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+1. In the GitHub repository, navigate to the Settings tab 
+2. From the left hand menu select 'Pages'
+3. From the source select Branch: main
+4. Click 'Save'
+5. A live link will be displayed when published successfully. 
 
-Which of these TV shows did you watch the most as a child?
-a) Rugrats
-b) Pokemon
-c) Power Rangers
-d) Hey Arnold!
-e) DuckTales
-f) Sailor Moon
+The live link can be found here - [https://christiangoran.github.io/child-personality-quiz/](https://christiangoran.github.io/child-personality-quiz/)
 
-Which of these video games did you enjoy playing the most as a child?
-a) Super Mario Bros.
-b) Sonic the Hedgehog
-c) The Legend of Zelda: Ocarina of Time
-d) Pokemon Red/Blue
-e) Crash Bandicoot
-f) Donkey Kong Country
+### Forking the GitHub Repository
 
-Which of these snacks did you love as a child?
-a) Snickers bar
-b) Haribo gummy bears
-c) Kinder Surprise chocolate eggs
-d) Fizzy cola bottles
-e) Hubba Bubba bubble gum
-f) Skittles
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+1. Click on Fork button in upper right hand corner
 
-Which of these pop stars did you idolize as a child?
-a) Britney Spears
-b) NSYNC
-c) Oasis
-d) Backstreet Boys
-e) Ace of Base
-f) Spice Girls
+### Cloning the GitHub Repository
 
-Which of these trends did you participate in as a child?
-a) Beanie Babies collecting
-b) Game Boy hard core gaming
-c) Garbage Pail Kids cards
-d) Turtles Action Figures
-e) Platform shoes
-f) Mood ring wearing
+You can clone the repository to use locally by following these steps:
+1. Navigate to the GitHub Repository you want to clone
+2. Click on the code drop down button
+3. Click on HTTPS
+4. Copy the repository link to the clipboard
+5. Open your IDE of choice (git must be installed for the next steps)
+6. Type git clone copied-git-url into the IDE terminal
 
-Which of these board games did you enjoy playing the most as a child?
-a) Monopoly
-b) Candy Land
-c) Clue
-d) Life
-e) Sorry!
-f) Operation
-
-Which of these outdoor activities did you enjoy the most as a child?
-a) Jump rope
-b) Hide and Seek
-c) Hopscotch
-d) Playing marbles
-e) Four Square
-f) Soccer
-
-Which of these school subjects did you excel in the most as a child?
-a) Math
-b) Science
-c) English
-d) Art
-e) Social Studies
-f) Physical Education
-
-Personality types:
-a) The popular kid
-b) The creative type
-c) The collector
-d) The tech-savvy kid
-e) The adventurous one
-f) The fashionista
-
-a) The popular kid - You were social and outgoing as a child, and likely had a large circle of friends. You enjoyed being the center of attention and were interested in fashion, pop culture, and the latest trends.
-b) The creative type - You were imaginative and artistic as a child, and enjoyed expressing yourself through various forms of creativity, such as drawing, writing, or music.
-c) The collector - You had a love for collecting things as a child, whether it was Beanie Babies, Pokemon cards, or other toys. You were likely organized and detail-oriented, and enjoyed the thrill of completing a set.
-d) The tech-savvy kid - You were fascinated by technology and video games as a child, and were likely an early adopter of new gadgets and devices. You enjoyed problem-solving and exploring new worlds through the screen.
-e) The adventurous one - You were active and outgoing as a child, and enjoyed trying new things and exploring the outdoors. You had a thirst for adventure and likely participated in sports or other physical activities.
-f) The fashionista -  wi
-
-Scoring:
-For each answer, assign points as follows:
-a = 1 point
-b = 2 points
-c = 3 points
-d = 4 points
-e = 5 points
-f = 6 points
-
-Add up the points for all 10 questions to determine the user's personality type:
-10-20 points = The Adventurer
-21-30 points = The Thinker
-31-40 points = The Leader
-41-40 points = The Nurturer
 
 Errors:
 
-userScore()
 
-I want userScore function to take the value from a clicked element/button and its corresponding key/value in an object in an array called answers, and then store it into another array called logPoints[].
 Credits:
 
 Special thanks to my mentor Garreth McGirr for the tips and guidance.
