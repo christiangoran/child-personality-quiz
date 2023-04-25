@@ -6,16 +6,21 @@ Portfolio Project 2
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [UX - Project Development & Planning](#UX-project-development-planning)
-    * [Strategy Plane](#project-goals)
+2. [UX - Project Development & Planning](#ux---project-development--planning)
+    * [Strategy Plane](#strategy-plane)
     * [Scope](#scope)
-    * [Design & Structure](#design-&-structure)
+    * [Design & Structure](#design--structure)
 3. [Technologies Used](#technologies-used)
 4. [Features](#features)
-5. [JavaScript Functionality](#javascript-functionality)
-6. [Testing & Bugs](#testing--bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+    * [All Page](#all-pages)
+    * [Start Section](#start-section)
+    * [Quiz Section](#quiz-section)
+    * [Result Section](#result-section)
+    * [Pie Section](#pie-section)
+5. [Testing & Bugs](#testing--bugs)
+6. [Deployment](#deployment)
+    * [GitHub Page](#github-pages)
+7. [Credits](#credits)
 
 ## Introduction
 
@@ -172,6 +177,8 @@ Game - the main game play area, with a progress bar, question, answer options to
 
   #### **Favicon** 
 
+  ![Header & Intro](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/favicon.png)
+
   #### **Footer**
   
 The footer contains links to relevant social media sites
@@ -218,8 +225,6 @@ The start section contains the header clearly giving the user an idea of what th
   The pie chart has a clear breakdown of the personalities that the answers resulted in.
  ![pie chart with results](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/pie-chart.png)
 
-  ## Future Features
-
 - - -
 ## Testing & Bugs
 [See TESTING.md for full breakdown of testing & bugs](testing.md)
@@ -258,22 +263,25 @@ You can clone the repository to use locally by following these steps:
 Errors:
 
 
-Credits:
+## Credits
 
-Special thanks to my mentor Garreth McGirr for the tips and guidance.
+- http://Chart.js used for creating the pie chart
 
-I used https://www.fontpair.com to find a matching font pair for the project.
+- I used https://www.fontpair.com to find a matching font pair for the project.
 
-I used https://www.upscale.media to upscale low res images.
+- I used SuzyBees Terry Pratchet quiz as an inspiration of how things could be done
 
-I learned flexbox from www.flexboxfroggy.com .
+- I used Emma Hewsons travel personality quiz as inspiration, awe and source of potential ways of solving issues.
 
-WebDev Simplified - Quiz App tutorial: https://www.youtube.com/watch?v=riDzcEQbX6k
+- Learning more about loops, arrays, objects, functions and how to call them and use arguments at these sites: 
 
-https://www.programiz.com/javascript/examples/extract-value-array
+  - https://w3schools.com
+  - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PL5riBBhIsrRSUaNZA2kendinzU5oDxkgG&index=13&t=993s
+  - https://www.youtube.com/watch?v=y17RuWkWdn8&list=PL5riBBhIsrRSUaNZA2kendinzU5oDxkgG&index=14&t=240s
+  
+- Special thanks to my mentor Garreth McGirr for the tips and guidance.
 
-
-
+- And thank you to the rest of the team at Code Institute, especially the gurus at tutoring. Save med a lot of time.
 
 
 
