@@ -5,32 +5,31 @@ Portfolio Project 2
 
 ## Table of Contents
 
-0. [Introduction](#introduction)
-1. [Project Development & Planning](#project-development--planning)
-    * [Project Goals](#project-goals)
-    * [Research](#research)
-    * [User Stories](#user-stories)
-    * [Content](#content)
-    * [Design, Layout & Structure](#design-layout--structure)
-2. [Technologies Used](#technologies-used)
-3. [Features](#features)
-4. [JavaScript Functionality](#javascript-functionality)
-5. [Testing & Bugs](#testing--bugs)
-6. [Deployment](#deployment)
-7. [Credits](#credits)
+1. [Introduction](#introduction)
+2. [UX - Project Development & Planning](#UX-project-development-planning)
+    * [Strategy Plane](#project-goals)
+    * [Scope](#scope)
+    * [Design & Structure](#design-&-structure)
+3. [Technologies Used](#technologies-used)
+4. [Features](#features)
+5. [JavaScript Functionality](#javascript-functionality)
+6. [Testing & Bugs](#testing--bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
 ## Introduction
 
 This is the documentation for my web application: What Type of Kid Were You Quiz. It has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
-## UX
-Strategy Plane
+## UX - Project Development & Planning
 
-Project Purpose:
+### Strategy Plane
+
+#### Project Purpose:
 The purpose of this project is to create an engaging and interactive personality quiz that helps users discover what type of child they were. By answering a series of questions, users will be able to uncover traits and characteristics that were present during their childhood. This quiz will be created using JavaScript to provide a dynamic and interactive experience for users, with the final results being displayed at the end of the quiz. The quiz will not only provide entertainment for users but also encourage self-reflection and introspection, helping them to gain a better understanding of themselves and their own unique personalities.
 
 
-Client Goals:
+#### Client Goals:
 
 For my second portfolio project on my Diploma in Web Application Development with Code Institute, I created a child personality quiz as a learning tool for interactive frontend development and my first project using JavaScript. The goal of this project is to create an engaging and informative tool that helps users discover what type of child they were. By offering a unique and personalized experience, the quiz aims to attract a wide range of users and can be used as an engaging element on a larger web site. For education purposes I will treat this project as a real-world application.
 
@@ -40,17 +39,19 @@ Engaging users with interactivity and a fun application on their site
 Allowing users to learn more about themselves and their unique childhood traits
 Providing insights and recommendations on how to work with different types of children
 
-User Goals:
+#### User Goals:
 The primary goal for users taking this quiz is to gain a deeper understanding of their own childhood personality traits and to have fun! By answering a series of questions related to their childhood experiences and behaviors, users can receive a personalized result that highlights their unique perspective and helps them better understand themselves. The main purpose is however to bring the user down memory lane and hopefully remember situations and items that was important to them when growing up.
 
-User goals:
+- User goals: 
 
-- Learning more about themselves and their childhood traits
-- Having fun doing a short quiz
-- Having a nice walk down memory lane
+  - Learning more about themselves and their childhood traits
+  - Having fun doing a short quiz
+  - Having a nice walk down memory lane
+  - I want to access the quiz on any device
+  - I want to navigate the site easily
+  - Want to give a feeling of modern retro feeling in design
 
-
-### Opportunities
+#### Opportunities
 
 
 | Opportunity | Importance | Viability / Feasability |
@@ -91,9 +92,9 @@ Every question and corresponding answers are tied to 6 personalities and explana
 Each time the user selects an answer it builds up the resulting picture of the user personality. At the end of the quiz the user will see the winning personality as well as a breakdown of their personality.
 
 
-## Design & Structure
+### Design & Structure
 
-## Wirefram Mockups and Color Card
+#### Wirefram Mockups and Color Card
 
 I began by using the program Balsamiq, which was recommended by the Code Institute, to create low-fidelity wireframes that would help me organize the information priorities and site structure and get a sense of the size of each page.
 
@@ -108,11 +109,11 @@ I thought the Brutalism style worked well in giving a touch of retro minimalisti
 
 ![Color and Font-Family Card](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/project2-color-card.png)
 
-### Structure 
+#### Structure 
 
 The structure of the site is informed by the scope, user and business goals as well as the principles of IXD (interaction design) to make sure I was conforming to users' expectations and making everything as intuitive as I could.
 
-The site has a simple structure, everything apart from the 404 page is contained on a single web page (index.html) with all the content replaced by the JavaScript code at different points in the game. There are 5 main divs within the page which appear and disappear depending on where you are in the game, these are:
+The site has a simple structure, and everything is contained on a single web page (index.html) with all the content replaced by the JavaScript code at different points in the game. There are 5 main divs within the page which appear and disappear depending on where you are in the game, these are:
 
 - Start Area - a brief intro with a name capture input to personalise the user's results and a start game button
 Game - the main game play area, with a progress bar, question, answer options to choose from and a 'restart game' button
@@ -121,9 +122,6 @@ Game - the main game play area, with a progress bar, question, answer options to
 - Result Area - After all the questions are answered the result area appears with the winning personality and an eplanatory text related to the personality
 - Pie Chart Area - Here the different personalities are broken down for the user.
 
-There is also a 404 page for when a user lands on a non-existent page with a button to link back to index.html to start the quiz again
-
-Both the main index.html and 404 page contain a footer, containing my name and social links.
 
 ### Design Choices
 

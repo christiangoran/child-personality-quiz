@@ -100,35 +100,35 @@ of the console the warnings were reduced to 4 warnings, 1 undefined variable, 3 
 
 * Fix: remove or add semi-colons as appropriate
 
-Warning: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
+- Warning: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
 
 * I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
 for...in loop without checking whether the object has its own property or the inherited property from its prototype.
 
-    //To fix this issue, I used the hasOwnProperty method to check whether the property belongs to the object or its prototype.
+  * To fix this issue, I used the hasOwnProperty method to check whether the property belongs to the object or its prototype.
     (https://www.educative.io/answers/what-is-the-hasownproperty-method-in-javascript)
     
     ```
-    function findWinner(result) {
-    let maxPercentage = 0;
-    let winningKey;
-    for (let key in result) {
+  function findWinner(result) {
+  let maxPercentage = 0;
+  let winningKey;
+  for (let key in result) {
         if (result.hasOwnProperty(key)) {
-      if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
-        maxPercentage = result[key];
-        winningKey = key;
+        if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+          maxPercentage = result[key];
+          winningKey = key;
+        }
       }
-    }
     }
   }
    ```
 However when adding the if(result.hasOwnProperty(key)) statement the calculations stops working and the percentage values of the different personalities does not add up to 100%. Since the site and the code is working as it is, I made the decision to leave this as it is for now.
 
- Warning: 'Object spread property' is only available in ES9
+- Warning: 'Object spread property' is only available in ES9
  
  * I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
  
- <details><summary>One ndefined Variable</summary>
+ <details><summary>One Undefined Variable</summary>
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint-undefined-variable.png">
 </details>
    
@@ -155,7 +155,7 @@ was (see code snippet below).
 #### **JavaScript Validation Post-Fix**
 
 <details><summary>JavaScript Validation Final Results</summary>
-<img src="docs/testing/testing_jsval_final.jpeg">
+<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint-metrics.png">
 </details>
 
 
@@ -173,22 +173,15 @@ There were no errors. However I had 6 warnings.
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/accessibility-warnings.png">
 </details>
 
-* Fix: change <p> to <h3> 
-* Comment: After the change to <h3> element I got a new warning saying I skipped over <h2>, this is however not the case, but due to the design of the web site, an <h2> element comes further down 
-on the site. To balance out the design/accessibility I decided to keep the structure as it is and limit the change from <p> elements to <h3> elements.
+* Fix: change paragraph to level 3 header 
+* Comment: After the change to lvl 3 header element I got a new warning saying I skipped over lvl 2 header, this is however not the case, but due to the design of the web site, an lvl 2 header element comes further down 
+on the site. To balance out the design/accessibility I decided to keep the structure as it is and limit the change from paragraph elements to lvl 3 header elements.
 
-<details><summary>Accessibility warnings</summary>
-<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/wave-improvements.png">
-</details>
 
 #### **Wave Web Accessibility Results Post-Fix **
 
-<details><summary>Wave Web Accessibility Final Results - index.html</summary>
-<img src="docs/testing/testing_waveval_final.jpeg">
-</details>
-
-<details><summary>Wave Web Accessibility Final Results - 404.html</summary>
-<img src="docs/testing/testing_waveval_final2.jpeg">
+<details><summary>Accessibility warnings</summary>
+<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/wave-improvements.png">
 </details>
 
 - - -
@@ -213,7 +206,7 @@ score is still on an acceptable level.
 
 #### **Final Results**
 <details><summary>Main Page</summary>
-<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/lighthouse-improvements.png">
+<img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/lighthouse-improvement.png">
 </details>
 
 - - -
@@ -230,6 +223,8 @@ I tested the site based on my user stories:
 | 3 | Having a nice walk down memory lane | When seeing the different answers to each question I definitely take a walk down memory lane |
 | 4 | I want to access the quiz on any device | The quiz has been designed to be fully responsive across desktop, tablet and mobile and extensively tested on each.|
 | 5 | I want to navigate the site easily | The site has a linear navigation where you follow the quiz through and minimal clicks are required to submit answers. At the end there is a button to take you back to the beginning of the quiz.|
+| 6 | Want to give a feeling of modern retro feeling in design | The site has a high contrast design with only two colors - black and a red nyans. Font selection is two bold sans serifs. The design gives a modern retro feeling without being too obvious on the retro aspect.|
+
 
 - - -
 ### Feature Testing
@@ -245,13 +240,8 @@ The site was tested on the following devices
 
 
 **Bugs found - specific to device testing:**
-* [Google Map API on mobile & Safari - border-radius](#2-google-map-api-on-mobile--safari---border-radius)
-* [Mobile input zoom-in not resetting](#4-mobile-input-zoom-in-not-resetting)
-* [Button colour on mobile](#5-button-colour-on-mobile)
-* [Button styling on mobile](#8-button-styling-on-mobile)
-* [IPhone 5S Safari 12.0 - Various Bugs](#11-iphone-5s-safari-120---various-bugs)
-* [Scrolling too far on highlight marker click on small screens](#12-highlight-marker-click-scrolls-too-far-on-smaller-screens)
-
+* [Button hover effect not resetting](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/button-hover.png)
+* [Name Field color](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/name-field-color.png)
 
 - - -
 #### **Browser Compatibility**
@@ -276,7 +266,7 @@ The site was tested on the following browsers.
 | Favicon | Appears in browser tab | Checked browser tabs in different browsers and devices | Favicon appeared as expected | Pass |
 | Footer Social Links | Hover Effect with transition on hover | Hovered on icons | Hover colour change happens as expected | Pass |
 | Footer Social Links | Open correct pages in separate tab | Clicked on social links | Links open correctly in separate tab | Pass |
-| Console | No errors appear in console throughout game | Checked console in dev tools during game play | Console logged no errors. Warnings relating to Google Maps API did appear [more information here](#6-google-maps-api---console-errors) | Pass |
+| Console | No errors appear in console throughout game | Checked console in dev tools during game play | Console logged no errors.| Pass |
 
 **Start Section**
 
@@ -286,7 +276,7 @@ The site was tested on the following browsers.
 | Start Section | Loads on page refresh - no other parts of game visible | Loading page | The correct divs load as expected | Pass |
 | Name Input | Allows user to input name | Inputting name | User is able to input name | Pass |
 | Name Input | User must enter name between 2-10 characters | Attempted to enter a name shorter than 2 & longer than 10 characters | Input box performs as expected | Pass |
-| Start Quiz Button | Hover effect with transition on hover | Hovered on Start Quiz Button | Hover effect works as expected ![Screen Recording](docs/testing/testing_features_welcome2.gif) | Pass |
+| Start Quiz Button | Hover effect with transition on hover | Hovered on Start Quiz Button | Hover effect works as expected | Pass |
 | Start Quiz Button | If no name inputted alert appears & game doesn't start | Clicked on start button with no name inputted | Alert pops up with message telling user to enter a name ![Screenshot](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/name-required.png) | Pass |
 | Start Quiz Button | Starts Quiz (hides start div and answers div) | Clicked on start game button (with username entered) | Game starts, start div disappears and answers div appears | Pass |
 
@@ -300,8 +290,8 @@ The site was tested on the following browsers.
 | Answer Boxes | Hover Effect with transition on hover | Hovered on questions | Hover effect works as expected | Pass |
 | Answer Boxes | Colour changes to red with transition when user selects an answer | Clicked on answer | Answer box changes colour as expected ![Anwer button](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/buttons-hover.png) | Pass |
 | Answer Boxes | Brief timeout before question / answers refresh | Clicked on answer | Game pauses before refreshing | Pass |
-| Answer Boxes | User cannot select another answer once a selection has been made during timeout | Clicked on an answer and attempted to select another quickly afterwards. Also checked console logs to if any additional answers were being added to the personalityTally array | Unable to select more than 1 answer during time out and nothing additional added to personalityTally | Pass |
-| Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh | Clicked on answer | Colour changes back on refresh as expected (see gif above) | Pass |
+| Answer Boxes | User cannot select another answer once a selection has been made during timeout | Clicked on an answer and attempted to select another quickly afterwards. Also checked console logs to if any additional answers were being added to the userChoice array | Unable to select more than 1 answer during time out and nothing additional added to userChoice | Pass |
+| Answer Boxes | Colour of previously selected box changes back to original colour after question/answer refresh | Clicked on answer | Colour changes back on refresh as expected | Pass |
 | Progress Indication | Increments each time a question is selected with the correct numbers & total number | Played game and checked progress indication | Progress indication increments correctly| Pass |
 | Quiz functionality | Correct personality type is added to userChoice array when user selects an answer | Log userChoice to console for testing purposes and check it matches the selected answer | console logs match the selected answers | Pass |
 | Quiz functionality | userChoice contains 10 personality types once main quiz is complete | Log userChoice to console for testing purposes and check number of items in array | code performs as expected | Pass |
@@ -310,8 +300,8 @@ The site was tested on the following browsers.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Personality Results Contents | Personality heading, pie chart, colour key, percentages & description appear correctly | Clicking on the final question | All content appeared as expected | Pass |
-| Personality heading | Contains name inputted by user | Inputting name and checking it appears in results | Name appears correctly ![Screenshot](docs/testing/testing_features_results1.jpeg)![Screenshot](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/restart-button.png) | Pass |
+| Personality Results Contents | Personality heading, pie chart, colour gradients, percentages & description appear correctly | Clicking on the final question | All content appeared as expected | Pass |
+| Personality heading | Contains name inputted by user | Inputting name and checking it appears in results | Name appears correctly ![Screenshot](https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/restart-button.png) | Pass |
 | Personality heading | Contains correct personality type | Using console logs to check the winning personality at different stages of the game and checking it matches | Personality type appears correctly and matches the console logs | Pass |
 | Pie chart | Pie sections & gradients match key | Visually checking the gradients match between the key and the pie chart | All gradients and percentages match | Pass |
 | Pie chart | Results are correct based on user answers in game | Using console logs to check the percentages and matching those with the pie and key | All numbers, personality types and colours match | Pass |
@@ -345,7 +335,5 @@ Remaining bugs:
 
 - - -
 - - -
-
-[Go to Top](#What-Type-of-Chile-Were-You-Quiz---testing)
 
 [Go to README](README.md)
