@@ -317,14 +317,14 @@ The site was tested on the following browsers.
 
 During development and testing I found the following bugs:
 - - -
-#### **1: Hover function on buttons does not work with touch screen devices **
+#### 1: Hover function on buttons does not work with touch screen devices 
 
 I tried to remove the hover function for smaller screen sizes. However this did not work well. There seem to be several options to explore for touch displays and I will add this function to a 
 future version of the website.
 
 - - -
 
-#### **2: Problems wth Google chart
+#### 2: Problems wth Google chart
 
 During the development I spent a good amount of hours trying to make Google Chart to work with the idea that I had. The problem was that I never managed to make the start animation work, nor to make the result argument populate the pie chart. After two days of trying to make it work, with the help of CI tutors and numerous pages on internet, I eventually found Chart.js and in a few hours I had what I wanted up and running. Extremely usefull site and easy to work with.
 
@@ -334,10 +334,6 @@ Remaining bugs:
 
 - The hover effect sticks on touch screen devices and will be fixed in an upcoming update.
 
-
-
-
-- - -
 - - -
 
 [Go to README](README.md)
