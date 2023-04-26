@@ -98,9 +98,9 @@ of the console the warnings were reduced to 4 warnings, 1 undefined variable, 3 
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint.png">
 </details>
 
-  * Fix: remove or add semi-colons as appropriate
+  - Fix: remove or add semi-colons as appropriate
 
-- Warning: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
+- **Warning:** "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
 
   - I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
 for...in loop without checking whether the object has its own property or the inherited property from its prototype.
@@ -122,18 +122,18 @@ for...in loop without checking whether the object has its own property or the in
       }
     }
   }
-   ```
+    ```
 
 
-- Warning: 'Object spread property' is only available in ES9
+- **Warning:** 'Object spread property' is only available in ES9
  
- - I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
+ - Fix: I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
  
  <details><summary>One Undefined Variable</summary>
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint-undefined-variable.png">
 </details>
    
-- One Undefined variable (buildPie) is used in another js-file called piechart.js and therefore JSHint gives this message.
+- **One Undefined variable** (buildPie) is used in another js-file called piechart.js and therefore JSHint gives this message.
 
 
 <details><summary>Warning 5: Undeclared/Unused Variables</summary>
@@ -174,12 +174,12 @@ There were no errors. However I had 6 warnings.
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/accessibility-warnings.png">
 </details>
 
-* Fix: change paragraph to level 3 header 
-* Comment: After the change to lvl 3 header element I got a new warning saying I skipped over lvl 2 header, this is however not the case, but due to the design of the web site, an lvl 2 header element comes further down 
+  - Fix: change paragraph to level 3 header 
+  - Comment: After the change to lvl 3 header element I got a new warning saying I skipped over lvl 2 header, this is however not the case, but due to the design of the web site, an lvl 2 header element comes further down 
 on the site. To balance out the design/accessibility I decided to keep the structure as it is and limit the change from paragraph elements to lvl 3 header elements.
 
 
-#### **Wave Web Accessibility Results Post-Fix **
+#### **Wave Web Accessibility Results Post-Fix**
 
 <details><summary>Accessibility warnings</summary>
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/wave-improvements.png">
