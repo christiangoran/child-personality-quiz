@@ -98,15 +98,16 @@ of the console the warnings were reduced to 4 warnings, 1 undefined variable, 3 
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint.png">
 </details>
 
-* Fix: remove or add semi-colons as appropriate
+  * Fix: remove or add semi-colons as appropriate
 
 - Warning: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype."
 
-* I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
+  - I did extensive investigation about this warnings, it seems to typically occurs when you loop through an object using a 
 for...in loop without checking whether the object has its own property or the inherited property from its prototype.
 
-  * To fix this issue, I used the hasOwnProperty method to check whether the property belongs to the object or its prototype.
+  - To fix this issue, I used the hasOwnProperty method to check whether the property belongs to the object or its prototype.
     (https://www.educative.io/answers/what-is-the-hasownproperty-method-in-javascript)
+    However when adding the if(result.hasOwnProperty(key)) statement the calculations stops working and the percentage values of the different personalities does not add up to 100%. Since the site and the code is working as it is, I made the decision to leave this as it is for now.
     
     ```
   function findWinner(result) {
@@ -114,7 +115,7 @@ for...in loop without checking whether the object has its own property or the in
   let winningKey;
   for (let key in result) {
         if (result.hasOwnProperty(key)) {
-        if (result[key] > maxPercentage) { // Learned more about finding largest number in an array here: https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/ //
+        if (result[key] > maxPercentage) { 
           maxPercentage = result[key];
           winningKey = key;
         }
@@ -122,24 +123,24 @@ for...in loop without checking whether the object has its own property or the in
     }
   }
    ```
-However when adding the if(result.hasOwnProperty(key)) statement the calculations stops working and the percentage values of the different personalities does not add up to 100%. Since the site and the code is working as it is, I made the decision to leave this as it is for now.
+
 
 - Warning: 'Object spread property' is only available in ES9
  
- * I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
+ - I added "/*jshint esversion: 9 */" to the top of the console and the warning disappeared.
  
  <details><summary>One Undefined Variable</summary>
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint-undefined-variable.png">
 </details>
    
-One Undefined variable (buildPie) is used in another js-file called piechart.js.
+- One Undefined variable (buildPie) is used in another js-file called piechart.js and therefore JSHint gives this message.
 
 
 <details><summary>Warning 5: Undeclared/Unused Variables</summary>
 <img src="https://github.com/christiangoran/child-personality-quiz/blob/main/assets/wireframes/jshint-unused-variables.png">
 </details>
 
-* Fix: remove undeclared variables where appropriate. One of these warnings was due to the function being called in index.html to handle the 
+  - Fix: remove undeclared variables where appropriate. One of these warnings was due to the function being called in index.html to handle the 
 form submission for the username. This was shown to us as good practice for handling form submission by Code Institute so I left it as it 
 was (see code snippet below).
 
