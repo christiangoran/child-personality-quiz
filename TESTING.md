@@ -326,7 +326,7 @@ future version of the website.
 
 #### 2: Problems wth Google chart
 
-During the development I spent a good amount of hours trying to make Google Chart to work with the idea that I had. The problem was that I never managed to make the start animation work, nor to make the result argument populate the pie chart. After two days of trying to make it work, with the help of CI tutors and numerous pages on internet, I eventually found Chart.js and in a few hours I had what I wanted up and running. Extremely usefull site and easy to work with.
+During the development I spent a good amount of hours trying to make Google Chart to work with the idea that I had. The problem was that I never managed to get the start-animation to work, nor did I manage to make the result argument populate the pie chart. After two days of trying to make it work, with the help of CI tutors and numerous pages on internet, I eventually found Chart.js and in a few hours I had what I wanted up and running. Extremely usefull site and easy to work with, ChartJS that is, not Google chart. :)
 
 ### Known & Remaining Bugs
 
