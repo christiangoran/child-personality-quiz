@@ -31,7 +31,7 @@ This is the documentation for my web application: What Type of Kid Were You Quiz
 ### Strategy Plane
 
 #### Project Purpose:
-The purpose of this project is to create an engaging and interactive personality quiz that helps users discover what type of child they were. By answering a series of questions, users will be able to uncover traits and characteristics that were present during their childhood. This quiz will be created using JavaScript to provide a dynamic and interactive experience for users, with the final results being displayed at the end of the quiz. The quiz will not only provide entertainment for users but also encourage self-reflection and introspection, helping them to gain a better understanding of themselves and their own unique personalities.
+The purpose of this project is to create an engaging and interactive personality quiz that helps users discover what type of child they were. By answering a series of questions, users will be able to uncover traits and characteristics that were present during their childhood. This quiz will be created using JavaScript to provide a dynamic and interactive experience for users, with the final results being displayed at the end of the quiz. The quiz will not only provide entertainment for users but hopefully also encourage the user to take a walk down memory lane. 
 
 
 #### Client Goals:
